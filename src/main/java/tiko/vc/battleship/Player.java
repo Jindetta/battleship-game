@@ -16,4 +16,13 @@ public class Player {
     public String getName() {
         
     }
+
+    /**
+     *
+     *
+     * @param name
+     */
+    public void setName(String name) {
+        
+    }
 }
