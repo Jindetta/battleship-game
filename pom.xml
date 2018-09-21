@@ -17,7 +17,7 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>1.5.0</version>
             <configuration>
-                <mainClass>tiko.vc.Run</mainClass>
+                <mainClass>Run</mainClass>
             </configuration>
         </plugin>
         <plugin>
@@ -27,7 +27,7 @@
             <configuration>
                 <archive>
                     <manifest>
-                        <mainClass>tiko.vc.Run</mainClass>
+                        <mainClass>Run</mainClass>
                     </manifest>
                 </archive>
             </configuration>
