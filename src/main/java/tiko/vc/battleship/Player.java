@@ -20,9 +20,9 @@ public class Player {
     }
 
     /**
+     * Sets player name.
      *
-     *
-     * @param name
+     * @param name Player name value.
      */
     public void setName(String name) {
         this.name = name;
