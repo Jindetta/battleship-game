@@ -6,7 +6,7 @@ package battleship;
 public class Player {
 
     /**
-     *
+     * Stores player name.
      */
     private String name;
 
