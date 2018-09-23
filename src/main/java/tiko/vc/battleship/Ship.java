@@ -11,6 +11,11 @@ public class Ship {
     private String name;
 
     /**
+     * Define ship length.
+     */
+    private int length;
+
+    /**
      *
      */
     public Ship() {
