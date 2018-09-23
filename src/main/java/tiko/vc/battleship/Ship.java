@@ -6,7 +6,7 @@ package battleship;
 public class Ship {
 
     /**
-     * Define ship name
+     * Define ship name.
      */
     private String name;
 
