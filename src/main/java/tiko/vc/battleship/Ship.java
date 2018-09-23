@@ -21,4 +21,9 @@ public class Ship {
     public Ship() {
         
     }
+
+    @Override
+    public String toString() {
+        return name != null ? name : "";
+    }
 }
