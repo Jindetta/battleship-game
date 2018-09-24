@@ -16,6 +16,11 @@ public class Cell {
     public boolean shot = false;
 
     /**
+     * 
+     */
+    private boolean visible = true;
+
+    /**
      *
      */
     public Cell() {
