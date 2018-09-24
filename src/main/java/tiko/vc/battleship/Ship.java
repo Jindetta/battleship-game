@@ -23,9 +23,9 @@ public class Ship {
     }
 
     /**
-     * Returns ships name.
-     * 
-     * @return name.
+     * Gets ship name.
+     *
+     * @return Ship name as String.
      */
     public String getName() {
         return name;
