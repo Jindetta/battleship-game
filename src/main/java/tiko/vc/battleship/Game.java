@@ -10,7 +10,10 @@ public class Game {
      */
     private int turnIndex;
 
-
+    /**
+     *
+     */
+    private Player[] players;
 
     /**
      *
