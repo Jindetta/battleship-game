@@ -11,7 +11,7 @@ public class Cell {
     public int type = 0;
 
     /**
-     * 
+     * Define if cell was shot. Defaults to false.
      */
     public boolean shot = false;
 
