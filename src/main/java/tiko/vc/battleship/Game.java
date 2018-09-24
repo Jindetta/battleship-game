@@ -16,6 +16,11 @@ public class Game {
     public static final int COLUMNS = 10;
 
     /**
+     *
+     */
+    public static final int MAP_SIZE = ROWS * COLUMNS;
+
+    /**
      * Stores turn index.
      */
     private int turnIndex;
