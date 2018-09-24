@@ -11,7 +11,7 @@ public class Game {
     private int turnIndex;
 
     /**
-     *
+     * Stores player information.
      */
     private Player[] players;
 
