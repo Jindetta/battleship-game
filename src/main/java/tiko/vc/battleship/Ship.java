@@ -31,6 +31,11 @@ public class Ship {
         return name;
     }
 
+    /**
+     * Sets ship name.
+     *
+     * @param name Ship name value.
+     */
     public void setName(String name) {
         this.name = name;
     }
