@@ -22,6 +22,11 @@ public class Ship {
         
     }
 
+    /**
+     * Returns ships name.
+     * 
+     * @return name.
+     */
     public String getName() {
         return name;
     }
