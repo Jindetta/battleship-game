@@ -11,6 +11,11 @@ public class Cell {
     public int type = 0;
 
     /**
+     * 
+     */
+    public boolean shot = false;
+
+    /**
      *
      */
     public Cell() {
