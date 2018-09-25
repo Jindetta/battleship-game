@@ -1,7 +1,7 @@
 package battleship;
 
 /**
- * 
+ * A class containing an individual cell data.
  */
 public class Cell {
 
