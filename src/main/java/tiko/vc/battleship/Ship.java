@@ -6,6 +6,11 @@ package battleship;
 public class Ship {
 
     /**
+     * Define ship id.
+     */
+    private int id;
+
+    /**
      * Define ship name.
      */
     private String name;
