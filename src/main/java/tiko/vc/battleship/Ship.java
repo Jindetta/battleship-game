@@ -34,6 +34,15 @@ public class Ship {
     }
 
     /**
+     * Gets ship id.
+     *
+     * @return Ship id as int.
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
      * Gets ship name.
      *
      * @return Ship name as String.
