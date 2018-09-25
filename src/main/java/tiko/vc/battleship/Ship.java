@@ -6,6 +6,11 @@ package battleship;
 public class Ship {
 
     /**
+     * Define ship id.
+     */
+    private int id;
+
+    /**
      * Define ship name.
      */
     private String name;
@@ -16,10 +21,16 @@ public class Ship {
     private int length;
 
     /**
+     * Overrides constructor.
      *
+     * @param length Ship length.
+     * @param id Ship id.
+     * @param name Ship name.
      */
-    public Ship() {
-        
+    public Ship(int length, int id, String name) {
+        this.length = length;
+        this.id = id;
+        this.name = name;
     }
 
     /**
