@@ -28,7 +28,7 @@ public class Cell {
     }
 
     /**
-     *
+     * Sets cell visible.
      */
     protected void setVisible() {
         visible = true;
