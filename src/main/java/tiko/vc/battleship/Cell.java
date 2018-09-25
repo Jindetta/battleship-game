@@ -16,7 +16,7 @@ public class Cell {
     public boolean shot = false;
 
     /**
-     * 
+     * Define if cell is visible. Defaults to true.
      */
     private boolean visible = true;
 
