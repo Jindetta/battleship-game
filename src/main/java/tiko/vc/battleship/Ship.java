@@ -21,7 +21,11 @@ public class Ship {
     private int length;
 
     /**
+     * Overrides constructor.
      *
+     * @param length Ship length.
+     * @param id Ship id.
+     * @param name Ship name.
      */
     public Ship(int length, int id, String name) {
         this.length = length;
