@@ -43,6 +43,15 @@ public class Ship {
     }
 
     /**
+     * Sets ship id.
+     *
+     * @param id Ship id value.
+     */
+    public int setId(int id) {
+        this.id = id;
+    }
+
+    /**
      * Gets ship name.
      *
      * @return Ship name as String.
