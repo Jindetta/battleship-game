@@ -23,8 +23,10 @@ public class Ship {
     /**
      *
      */
-    public Ship() {
-        
+    public Ship(int length, int id, String name) {
+        this.length = length;
+        this.id = id;
+        this.name = name;
     }
 
     /**
