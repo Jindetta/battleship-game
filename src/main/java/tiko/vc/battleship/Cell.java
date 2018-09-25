@@ -1,7 +1,7 @@
 package battleship;
 
 /**
- * 
+ * A class containing an individual cell data.
  */
 public class Cell {
 
@@ -16,7 +16,7 @@ public class Cell {
     public boolean shot = false;
 
     /**
-     * 
+     * Define if cell is visible. Defaults to true.
      */
     private boolean visible = true;
 
@@ -25,5 +25,12 @@ public class Cell {
      */
     public Cell() {
         
+    }
+
+    /**
+     * Sets cell visible.
+     */
+    protected void setVisible() {
+        visible = true;
     }
 }
