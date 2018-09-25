@@ -26,4 +26,11 @@ public class Cell {
     public Cell() {
         
     }
+
+    /**
+     *
+     */
+    protected void setVisible() {
+
+    }
 }
