@@ -11,7 +11,7 @@ public class Statistics {
     private int shotsMissed;
 
     /**
-     *
+     * Records shots hit.
      */
     private int shotsHit;
 
