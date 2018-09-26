@@ -47,7 +47,7 @@ public class Ship {
      *
      * @param id Ship id value.
      */
-    public int setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
