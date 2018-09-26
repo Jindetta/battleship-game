@@ -35,5 +35,24 @@ public class Cell {
     }
 
     public String toString() {
+        char value = '-';
+
+        if (type != 0) {
+            if (shot) {
+                value = 'X';
+            } else {
+                if (visible) {
+                    value = '@';
+                }
+
+                if (Game.DEBUG_MODE) {
+                    value = (char) type;
+                }
+            }
+        } else if (shot) {
+            value = 'o';
+        }
+
+        return String.valueOf(value);
     }
 }
