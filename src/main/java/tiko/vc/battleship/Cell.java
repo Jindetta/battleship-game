@@ -21,7 +21,9 @@ public class Cell {
     private boolean visible = true;
 
     /**
+     * Override constructor.
      *
+     * @param visible Cell visibility
      */
     public Cell(boolean visible) {
         this.visible = visible;
