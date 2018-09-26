@@ -36,6 +36,7 @@ public class Cell {
         visible = true;
     }
 
+    @Override
     public String toString() {
         char value = '-';
 
