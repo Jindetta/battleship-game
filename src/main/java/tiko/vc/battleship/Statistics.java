@@ -13,6 +13,11 @@ public class Statistics {
     /**
      *
      */
+    private int shotsHit;
+
+    /**
+     *
+     */
     public Statistics() {
 
     }
