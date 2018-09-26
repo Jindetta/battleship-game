@@ -33,7 +33,7 @@ public class Game {
     /**
      *
      */
-    public Game() {
+    private Game() {
         
     }
 }
