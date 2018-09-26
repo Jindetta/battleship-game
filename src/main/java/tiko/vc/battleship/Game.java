@@ -36,14 +36,18 @@ public class Game {
     /**
      * Prompts for user input.
      *
-     * @return User input as String (uppercase).
+     * @return Trimmed user input as String (uppercase).
      */
     private String getUserInput() {
+        String output;
+
         try (BufferedReader input = new BufferedReader(new InputStreamReader(System.in))) {
-            return input.readLine().toUpperCase();
+            output = input.readLine().toUpperCase();
         } catch (Exception e) {
-            return e.getMessage();
+            output = e.getMessage();
         }
+
+        return output.trim();
     }
 
     /**
