@@ -8,6 +8,11 @@ public class Statistics {
     /**
      *
      */
+    private int shotsMissed;
+
+    /**
+     *
+     */
     public Statistics() {
 
     }
