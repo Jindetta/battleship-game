@@ -33,4 +33,7 @@ public class Cell {
     protected void setVisible() {
         visible = true;
     }
+
+    public String toString() {
+    }
 }
