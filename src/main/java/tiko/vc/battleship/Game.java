@@ -41,6 +41,8 @@ public class Game {
      *
      */
     public static void initializeGame() {
+        Game game = new Game();
+
         
     }
 }
