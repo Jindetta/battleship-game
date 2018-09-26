@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 public class Game {
 
     /**
-     *
+     * Defines the amount of rows of the game.
      */
     public static final int ROWS = 10;
 
