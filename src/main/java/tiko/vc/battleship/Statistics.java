@@ -6,7 +6,7 @@ package battleship;
 public class Statistics {
 
     /**
-     *
+     * Records shots missed.
      */
     private int shotsMissed;
 
