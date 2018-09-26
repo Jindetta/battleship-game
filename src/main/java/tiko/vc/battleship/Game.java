@@ -34,7 +34,9 @@ public class Game {
     private Player[] players;
 
     /**
+     * Prompts for user input.
      *
+     * @return User input as String (uppercase).
      */
     private String getUserInput() {
         try (BufferedReader input = new BufferedReader(new InputStreamReader(System.in))) {
