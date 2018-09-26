@@ -33,6 +33,13 @@ public class Game {
     /**
      *
      */
+    private String processInput() {
+        return null;
+    }
+
+    /**
+     *
+     */
     private Game() {
         
     }
