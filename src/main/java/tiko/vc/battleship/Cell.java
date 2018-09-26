@@ -23,8 +23,8 @@ public class Cell {
     /**
      *
      */
-    public Cell() {
-        
+    public Cell(boolean visible) {
+        this.visible = visible;
     }
 
     /**
