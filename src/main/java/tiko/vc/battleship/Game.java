@@ -37,7 +37,11 @@ public class Game {
      *
      */
     private String processInput() {
-        return null;
+        try (BufferedReader input = new BufferedReader(new InputStreamReader(System.in))) {
+            return input.readLine().toUpperCase();
+        } catch (Exception e) {
+            return e.getMessage();
+        }
     }
 
     /**
