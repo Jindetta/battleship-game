@@ -19,7 +19,7 @@ public class Game {
     public static final int COLUMNS = 10;
 
     /**
-     *
+     * Calculates the size of the game map by using constants ROWS and COLUMNS.
      */
     public static final int MAP_SIZE = ROWS * COLUMNS;
 
