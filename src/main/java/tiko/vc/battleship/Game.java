@@ -36,4 +36,11 @@ public class Game {
     private Game() {
         
     }
+
+    /**
+     *
+     */
+    public static void initializeGame() {
+        
+    }
 }
