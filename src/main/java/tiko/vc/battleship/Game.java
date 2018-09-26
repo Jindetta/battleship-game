@@ -14,7 +14,7 @@ public class Game {
     public static final int ROWS = 10;
 
     /**
-     *
+     * Defines the amount of columns of the game.
      */
     public static final int COLUMNS = 10;
 
