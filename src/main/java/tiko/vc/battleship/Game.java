@@ -38,11 +38,11 @@ public class Game {
     }
 
     /**
-     *
+     * Initializes a new game session.
      */
     public static void initializeGame() {
         Game game = new Game();
 
-        
+
     }
 }
