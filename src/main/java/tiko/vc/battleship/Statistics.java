@@ -5,4 +5,10 @@ package battleship;
  */
 public class Statistics {
 
+    /**
+     *
+     */
+    public Statistics() {
+
+    }
 }
