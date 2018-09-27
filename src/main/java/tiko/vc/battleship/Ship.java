@@ -61,6 +61,15 @@ public class Ship {
     }
 
     /**
+     * Sets ship length.
+     *
+     * @param length Ship length value.
+     */
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    /**
      * Gets ship name.
      *
      * @return Ship name as String.
