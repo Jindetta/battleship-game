@@ -52,6 +52,15 @@ public class Ship {
     }
 
     /**
+     * Gets ship length.
+     *
+     * @return Ship length as int.
+     */
+    public int getLength() {
+        return length;
+    }
+
+    /**
      * Gets ship name.
      *
      * @return Ship name as String.
