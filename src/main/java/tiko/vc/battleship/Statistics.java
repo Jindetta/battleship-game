@@ -23,6 +23,11 @@ public class Statistics {
     /**
      *
      */
+    private int currentStreak;
+
+    /**
+     *
+     */
     public Statistics() {
 
     }
