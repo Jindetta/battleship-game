@@ -21,6 +21,11 @@ public class Player {
     private Ship[] vessels;
 
     /**
+     *
+     */
+    private TargetingLogic aiLogic;
+
+    /**
      * Gets player name.
      *
      * @return Player name as String.
