@@ -18,6 +18,11 @@ public class Statistics {
     /**
      *
      */
+    private int shotStreak;
+
+    /**
+     *
+     */
     public Statistics() {
 
     }
