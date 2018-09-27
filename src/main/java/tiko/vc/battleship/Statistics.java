@@ -21,7 +21,7 @@ public class Statistics {
     private int shotStreak;
 
     /**
-     *
+     * Records current shot streak.
      */
     private int currentStreak;
 
