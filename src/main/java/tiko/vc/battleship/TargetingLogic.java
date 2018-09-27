@@ -21,6 +21,6 @@ public class TargetingLogic {
      *
      */
     public TargetingLogic() {
-        
+        rng = new Random();
     }
 }
