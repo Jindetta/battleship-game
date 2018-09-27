@@ -6,7 +6,7 @@ package battleship;
 public class Helper {
 
     /**
-     *
+     * Define length of total padding.
      */
     private static final int TOTAL_PADDING;
 }
