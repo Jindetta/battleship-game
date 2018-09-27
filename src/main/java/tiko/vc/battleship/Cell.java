@@ -21,10 +21,12 @@ public class Cell {
     private boolean visible = true;
 
     /**
+     * Override constructor.
      *
+     * @param visible Cell visibility
      */
-    public Cell() {
-        
+    public Cell(boolean visible) {
+        this.visible = visible;
     }
 
     /**
@@ -32,5 +34,28 @@ public class Cell {
      */
     protected void setVisible() {
         visible = true;
+    }
+
+    @Override
+    public String toString() {
+        char value = '-';
+
+        if (type != 0) {
+            if (shot) {
+                value = 'X';
+            } else {
+                if (visible) {
+                    value = '@';
+                }
+
+                if (Game.DEBUG_MODE) {
+                    value = (char) type;
+                }
+            }
+        } else if (shot) {
+            value = 'o';
+        }
+
+        return String.valueOf(value);
     }
 }
