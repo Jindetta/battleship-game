@@ -7,6 +7,11 @@ import java.util.random;
  */
 public class TargetingLogic {
 	
+    /**
+     *
+     */
+    private Random rng;
+
 	/**
 	 * Contains the information of the game map positions, and priorites the positions.
 	 */
