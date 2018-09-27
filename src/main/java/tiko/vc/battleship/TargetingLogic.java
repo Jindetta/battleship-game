@@ -23,4 +23,8 @@ public class TargetingLogic {
     public TargetingLogic() {
         rng = new Random();
     }
+
+    public int random() {
+        return rng.nextInt(0, 10);
+    }
 }
