@@ -11,7 +11,7 @@ public class Player {
     private String name;
 
     /**
-     *
+     * Stores player map data.
      */
     private Cell[] map;
 
