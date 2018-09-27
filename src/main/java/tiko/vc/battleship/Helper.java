@@ -11,7 +11,7 @@ public class Helper {
     private static final int TOTAL_PADDING;
 
     /**
-     * 
+     * Define length of spacing between players.
      */
     private static final int PLAYER_SPACING;
 }
