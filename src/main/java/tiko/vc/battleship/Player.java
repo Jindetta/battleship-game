@@ -11,6 +11,11 @@ public class Player {
     private String name;
 
     /**
+     *
+     */
+    private Cell[] map;
+
+    /**
      * Gets player name.
      *
      * @return Player name as String.
