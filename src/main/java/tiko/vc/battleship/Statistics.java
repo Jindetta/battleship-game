@@ -16,7 +16,7 @@ public class Statistics {
     private int shotsHit;
 
     /**
-     *
+     * Records biggest shot streak.
      */
     private int shotStreak;
 
