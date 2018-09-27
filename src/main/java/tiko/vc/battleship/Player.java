@@ -21,7 +21,7 @@ public class Player {
     private Ship[] vessels;
 
     /**
-     *
+     * Stores AI targeting logic.
      */
     private TargetingLogic aiLogic;
 
