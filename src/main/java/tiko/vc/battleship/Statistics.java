@@ -28,6 +28,11 @@ public class Statistics {
     /**
      *
      */
+    private int gamesLost;
+
+    /**
+     *
+     */
     public Statistics() {
 
     }
