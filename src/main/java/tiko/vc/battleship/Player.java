@@ -46,7 +46,7 @@ public class Player {
     /**
      *
      */
-    public Player() {
+    public Player(boolean humanPlayer, String name, Ship[] vessels) {
         
     }
 }
