@@ -24,7 +24,7 @@ public class Game {
     public static final int MAP_SIZE = ROWS * COLUMNS;
 
     /**
-     *
+     * Defines debug mode status.
      */
     public static final boolean DEBUG_MODE = true;
 
