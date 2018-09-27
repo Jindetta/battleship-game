@@ -44,7 +44,11 @@ public class Player {
     }
 
     /**
+     * Overrides default constructor.
      *
+     * @param humanPlayer Human player.
+     * @param name        Player name.
+     * @param vessels     Player vessels/fleet.
      */
     public Player(boolean humanPlayer, String name, Ship[] vessels) {
         
