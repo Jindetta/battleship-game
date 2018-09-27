@@ -16,6 +16,11 @@ public class Player {
     private Cell[] map;
 
     /**
+     *
+     */
+    private Ship[] vessels;
+
+    /**
      * Gets player name.
      *
      * @return Player name as String.
