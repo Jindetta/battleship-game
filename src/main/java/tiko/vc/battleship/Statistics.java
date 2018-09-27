@@ -26,7 +26,7 @@ public class Statistics {
     private int currentStreak;
 
     /**
-     *
+     * Records games lost.
      */
     private int gamesLost;
 
