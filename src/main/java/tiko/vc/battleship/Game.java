@@ -58,6 +58,13 @@ public class Game {
     /**
      *
      */
+    public void launchMenu() {
+        
+    }
+
+    /**
+     *
+     */
     private Game() {
         
     }
