@@ -56,10 +56,10 @@ public class Game {
     }
 
     /**
-     *
+     * Launches game menu.
      */
     public void launchMenu() {
-        
+
     }
 
     /**
