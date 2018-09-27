@@ -16,7 +16,7 @@ public class Player {
     private Cell[] map;
 
     /**
-     *
+     * Stores player ship data.
      */
     private Ship[] vessels;
 
