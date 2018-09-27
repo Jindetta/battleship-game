@@ -16,4 +16,8 @@ public class TargetingLogic {
     public TargetingLogic() {
         
     }
+
+    public int random() {
+        return 0;
+    }
 }
