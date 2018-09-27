@@ -24,6 +24,11 @@ public class Game {
     public static final int MAP_SIZE = ROWS * COLUMNS;
 
     /**
+     *
+     */
+    public static final boolean DEBUG_MODE = true;
+
+    /**
      * Stores turn index.
      */
     private int turnIndex;
