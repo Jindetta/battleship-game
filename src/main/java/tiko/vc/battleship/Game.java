@@ -51,13 +51,7 @@ public class Game {
      * @return Trimmed user input as String (uppercase).
      */
     private String getUserInput() {
-        String output;
-
-        try (BufferedReader input = new BufferedReader(new InputStreamReader(System.in))) {
-            output = input.readLine().toUpperCase();
-        } catch (Exception e) {
-            output = e.getMessage();
-        }
+        String output = scanner.nextLine();
 
         return output.trim();
     }
