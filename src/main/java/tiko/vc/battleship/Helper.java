@@ -19,4 +19,9 @@ public class Helper {
      * Define length of column padding.
      */
     private static final int COLUMN_PADDING;
+
+    /**
+     * 
+     */
+    private static final int ROW_PADDING;
 }
