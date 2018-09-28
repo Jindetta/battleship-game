@@ -1,6 +1,6 @@
 package tiko.vc.battleship;
 
-import java.util.random;
+import java.util.Random;
 
 /**
  * 
