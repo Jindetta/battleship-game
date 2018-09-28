@@ -73,7 +73,7 @@ public class Game {
      *
      */
     private Game() {
-        
+        scanner = new Scanner(System.in, "UTF-8");
     }
 
     /**
