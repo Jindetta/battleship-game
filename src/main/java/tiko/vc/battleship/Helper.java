@@ -24,4 +24,9 @@ public class Helper {
      * Define length of row padding.
      */
     private static final int ROW_PADDING;
+
+    /**
+     * 
+     */
+    public static final int IS_TOTAL = 0;
 }
