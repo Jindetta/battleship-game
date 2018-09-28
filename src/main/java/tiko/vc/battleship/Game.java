@@ -41,6 +41,11 @@ public class Game {
     private Player[] players;
 
     /**
+     *
+     */
+    private Scanner scanner;
+
+    /**
      * Prompts for user input.
      *
      * @return Trimmed user input as String (uppercase).
