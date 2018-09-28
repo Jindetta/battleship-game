@@ -26,7 +26,7 @@ public class Helper {
     private static final int ROW_PADDING;
 
     /**
-     * 
+     * Define constant for total.
      */
     public static final int IS_TOTAL = 0;
 }
