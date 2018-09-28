@@ -1,6 +1,6 @@
 package battleship;
 
-import java.util.random;
+import java.util.Random;
 
 /**
  * 
