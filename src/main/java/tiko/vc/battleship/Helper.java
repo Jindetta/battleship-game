@@ -16,7 +16,7 @@ public class Helper {
     private static final int PLAYER_SPACING;
 
     /**
-     *
+     * Define length of column padding.
      */
     private static final int COLUMN_PADDING;
 }
