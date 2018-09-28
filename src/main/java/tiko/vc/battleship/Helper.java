@@ -29,4 +29,14 @@ public class Helper {
      * Define constant for total.
      */
     public static final int IS_TOTAL = 0;
+
+    /**
+     * Define temporary static initializer to compile.
+     */
+    static {
+        TOTAL_PADDING = 0;
+        PLAYER_SPACING  = 0;
+        COLUMN_PADDING = 0;
+        ROW_PADDING = 0;
+    }
 }
