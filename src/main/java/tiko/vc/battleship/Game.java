@@ -1,7 +1,5 @@
 package battleship;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 import com.diogonunes.jcdp.color.ColoredPrinter;
