@@ -59,7 +59,46 @@ public class Game {
      * Launches game menu.
      */
     public void launchMenu() {
+        boolean exitMenu = false;
+        ColoredPrinter cp = new ColoredPrinter.Builder(1, false).build();
 
+        while (!exitMenu) {
+            cp.println("******** BATTLESHIP - GAME ********", Attribute.NONE, FColor.BLUE, BColor.NONE);
+
+            cp.print("1: ", Attribute.BOLD, FColor.WHITE, BColor.NONE);
+            cp.println("Generate Ships (not implemented)", Attribute.NONE, FColor.GREEN, BColor.NONE);
+            cp.print("2: ", Attribute.BOLD, FColor.WHITE, BColor.NONE);
+            cp.println("Place Ships (not implemented)", Attribute.NONE, FColor.GREEN, BColor.NONE);
+            cp.print("3: ", Attribute.BOLD, FColor.WHITE, BColor.NONE);
+            cp.println("Start Game (not implemented)", Attribute.NONE, FColor.GREEN, BColor.NONE);
+            cp.print("4: ", Attribute.BOLD, FColor.WHITE, BColor.NONE);
+            cp.println("Exit Game", Attribute.NONE, FColor.GREEN, BColor.NONE);
+
+            try {
+                cp.println("", Attribute.BOLD, FColor.WHITE, BColor.NONE);
+                System.out.print("Enter selection: ");
+
+                switch (getUserInput()) {
+                    case "1":
+                    case "2":
+                    case "3":
+                        cp.println("Sorry, not implemented!", Attribute.NONE, FColor.BLUE, BColor.NONE);
+                        break;
+                    case "4":
+                        exitMenu = true;
+                        cp.println("Thank you for playing!", Attribute.NONE, FColor.GREEN, BColor.NONE);
+                        break;
+                    default:
+                        throw new Exception("Unknown selection.");
+                }
+            } catch (Exception e) {
+                cp.println(e.getMessage(), Attribute.BOLD, FColor.RED, BColor.NONE);
+            }
+
+            cp.println("");
+        }
+
+        cp.clear();
     }
 
     /**
