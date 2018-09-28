@@ -52,8 +52,7 @@ public class Game {
      */
     private String getUserInput() {
         String output = scanner.nextLine();
-
-        return output.trim();
+        return output.trim().toUpperCase();
     }
 
     /**
