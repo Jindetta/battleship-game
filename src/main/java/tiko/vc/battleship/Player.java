@@ -44,6 +44,13 @@ public class Player {
     }
 
     /**
+     *
+     */
+    public void setVessels(Ship[] vessels) {
+        
+    }
+
+    /**
      * Overrides default constructor.
      *
      * @param humanPlayer Human player.
@@ -51,6 +58,6 @@ public class Player {
      * @param vessels     Player vessels/fleet.
      */
     public Player(boolean humanPlayer, String name, Ship[] vessels) {
-        
+
     }
 }
