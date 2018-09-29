@@ -51,4 +51,11 @@ public class Statistics {
     public Statistics() {
 
     }
+
+    /**
+     *
+     */
+    public final void resetShotsFired() {
+
+    }
 }
