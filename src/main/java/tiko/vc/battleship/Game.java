@@ -41,7 +41,7 @@ public class Game {
     private Player[] players;
     
     /**
-     * 
+     * Define ship types in constant array.
      */
     public final Ship[] SHIPS = {
     	new Ship(2, 'd', "Destroyer"),
