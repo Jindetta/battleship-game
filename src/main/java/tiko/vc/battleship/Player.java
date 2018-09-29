@@ -53,7 +53,7 @@ public class Player {
     }
 
     /**
-     *
+     * Gets player AI status.
      */
     public boolean isAI() {
         return aiLogic != null;
