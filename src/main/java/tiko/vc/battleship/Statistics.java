@@ -41,6 +41,11 @@ public class Statistics {
     private double winLossRatio;
 
     /**
+     *
+     */
+    private double shotAccuracy;
+
+    /**
      * Override constructor.
      */
     public Statistics() {
