@@ -56,7 +56,7 @@ public class Player {
      *
      */
     public boolean isAI() {
-        
+        return aiLogic != null;
     }
 
     /**
