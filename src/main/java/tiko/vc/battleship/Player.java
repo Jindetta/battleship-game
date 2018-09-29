@@ -49,7 +49,7 @@ public class Player {
      * Sets player vessels.
      */
     public void setVessels(Ship[] vessels) {
-
+        this.vessels = Arrays.copyOf(vessels, vessels.length);
     }
 
     /**
