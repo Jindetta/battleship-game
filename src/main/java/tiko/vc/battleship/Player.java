@@ -44,10 +44,10 @@ public class Player {
     }
 
     /**
-     *
+     * Sets player vessels.
      */
     public void setVessels(Ship[] vessels) {
-        
+
     }
 
     /**
