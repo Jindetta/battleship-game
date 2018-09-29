@@ -60,6 +60,10 @@ public class Player {
      * @param vessels     Player vessels/fleet.
      */
     public Player(boolean humanPlayer, String name, Ship[] vessels) {
+        // Short for: if (humanPlayer) aiLogic = null; else aiLogic = TargetingLogic;
+        aiLogic = humanPlayer ? null : new TargetingLogic();
 
+        setVessels(vessels);
+        setName(name);
     }
 }
