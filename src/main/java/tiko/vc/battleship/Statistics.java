@@ -36,6 +36,11 @@ public class Statistics {
     private int gamesWon;
 
     /**
+     *
+     */
+    private double winLossRatio;
+
+    /**
      * Override constructor.
      */
     public Statistics() {
