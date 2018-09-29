@@ -31,6 +31,11 @@ public class Statistics {
     private int gamesLost;
 
     /**
+     *
+     */
+    private int gamesWon;
+
+    /**
      * Override constructor.
      */
     public Statistics() {
