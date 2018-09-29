@@ -28,9 +28,9 @@ public class Ship {
      * @param name Ship name.
      */
     public Ship(int length, int id, String name) {
-        this.length = length;
-        this.id = id;
-        this.name = name;
+        setLength(length);
+        setName(name);
+        setId(id);
     }
 
     /**
