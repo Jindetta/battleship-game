@@ -43,7 +43,13 @@ public class Game {
     /**
      * 
      */
-    public final Ship[] SHIPS;
+    public final Ship[] SHIPS = {
+    	new Ship(2, 'd', "Destroyer"),
+    	new Ship(3, 's', "Submarine"),
+    	new Ship(3, 'c', "Cruiser"),
+    	new Ship(4, 'b', "Battleship"),
+    	new Ship(5, 'C', "Carrier")
+    };
 
     /**
      *
