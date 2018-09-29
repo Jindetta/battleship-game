@@ -1,7 +1,7 @@
 package battleship;
 
 /**
- * 
+ * A class containing the data needed for the player.
  */
 public class Player {
 

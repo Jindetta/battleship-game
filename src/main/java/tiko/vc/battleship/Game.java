@@ -39,9 +39,20 @@ public class Game {
      * Stores player information.
      */
     private Player[] players;
+    
+    /**
+     * Define ship types in constant array.
+     */
+    public final Ship[] SHIPS = {
+    	new Ship(2, 'd', "Destroyer"),
+    	new Ship(3, 's', "Submarine"),
+    	new Ship(3, 'c', "Cruiser"),
+    	new Ship(4, 'b', "Battleship"),
+    	new Ship(5, 'C', "Carrier")
+    };
 
     /**
-     *
+     * Scanner to read users input.
      */
     private Scanner scanner;
 
