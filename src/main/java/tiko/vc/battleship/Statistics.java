@@ -41,7 +41,7 @@ public class Statistics {
     private double winLossRatio;
 
     /**
-     *
+     * Records shot accuracy.
      */
     private double shotAccuracy;
 
