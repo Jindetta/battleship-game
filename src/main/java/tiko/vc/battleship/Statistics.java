@@ -36,7 +36,7 @@ public class Statistics {
     private int gamesWon;
 
     /**
-     *
+     * Records win/loss ratio.
      */
     private double winLossRatio;
 
