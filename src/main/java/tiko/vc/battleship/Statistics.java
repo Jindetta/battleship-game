@@ -53,7 +53,7 @@ public class Statistics {
     }
 
     /**
-     *
+     * Resets total shots fired.
      */
     public final void resetShotsFired() {
         shotAccuracy = 0;
