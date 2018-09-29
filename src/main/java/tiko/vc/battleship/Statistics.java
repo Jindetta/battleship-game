@@ -31,7 +31,7 @@ public class Statistics {
     private int gamesLost;
 
     /**
-     *
+     * Records games won.
      */
     private int gamesWon;
 
