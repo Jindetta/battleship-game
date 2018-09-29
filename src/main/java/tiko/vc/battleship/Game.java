@@ -52,7 +52,7 @@ public class Game {
     };
 
     /**
-     *
+     * Scanner to read users input.
      */
     private Scanner scanner;
 
