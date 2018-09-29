@@ -53,6 +53,13 @@ public class Player {
     }
 
     /**
+     *
+     */
+    public boolean isAI() {
+        
+    }
+
+    /**
      * Overrides default constructor.
      *
      * @param humanPlayer Human player.
