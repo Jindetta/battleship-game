@@ -65,6 +65,10 @@ public class Game {
         while (!exitMenu) {
             cp.println("******** BATTLESHIP - GAME ********", Attribute.NONE, FColor.BLUE, BColor.NONE);
 
+            // Temporary selection
+            cp.print("0: ", Attribute.BOLD, FColor.WHITE, BColor.NONE);
+            cp.println("Show Map View", Attribute.NONE, FColor.YELLOW, BColor.NONE);
+
             cp.print("1: ", Attribute.BOLD, FColor.WHITE, BColor.NONE);
             cp.println("Generate Ships (not implemented)", Attribute.NONE, FColor.GREEN, BColor.NONE);
             cp.print("2: ", Attribute.BOLD, FColor.WHITE, BColor.NONE);
@@ -74,11 +78,60 @@ public class Game {
             cp.print("4: ", Attribute.BOLD, FColor.WHITE, BColor.NONE);
             cp.println("Exit Game", Attribute.NONE, FColor.GREEN, BColor.NONE);
 
+            if (DEBUG_MODE) {
+                cp.print("\n-1: ", Attribute.BOLD, FColor.WHITE, BColor.NONE);
+                cp.println("Toggle Debug Mode (not implemented)", Attribute.NONE, FColor.YELLOW, BColor.NONE);
+            }
+
             try {
                 cp.println("", Attribute.BOLD, FColor.WHITE, BColor.NONE);
                 System.out.print("Enter selection: ");
 
                 switch (getUserInput()) {
+                    case "0":
+                        cp.print(" ========== YOU =========== ", Attribute.BOLD, FColor.WHITE, BColor.BLUE);
+                        cp.print(" ", Attribute.NONE, FColor.NONE, BColor.NONE);
+                        cp.println(" =========== AI =========== ", Attribute.BOLD, FColor.WHITE, BColor.RED);
+                        cp.print("", Attribute.NONE, FColor.NONE, BColor.NONE);
+                        cp.print("   1  2  3  4  5  6  7  8  9", Attribute.BOLD, FColor.BLUE, BColor.NONE);
+                        cp.println("    1  2  3  4  5  6  7  8  9", Attribute.BOLD, FColor.RED, BColor.NONE);
+
+                        cp.print("A: ", Attribute.BOLD, FColor.BLUE, BColor.NONE);
+                        cp.print("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+                        cp.print(" A: ", Attribute.BOLD, FColor.RED, BColor.NONE);
+                        cp.println("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+
+                        cp.print("B: ", Attribute.BOLD, FColor.BLUE, BColor.NONE);
+                        cp.print("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+                        cp.print(" B: ", Attribute.BOLD, FColor.RED, BColor.NONE);
+                        cp.println("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+
+                        cp.print("C: ", Attribute.BOLD, FColor.BLUE, BColor.NONE);
+                        cp.print("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+                        cp.print(" C: ", Attribute.BOLD, FColor.RED, BColor.NONE);
+                        cp.println("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+
+                        cp.print("D: ", Attribute.BOLD, FColor.BLUE, BColor.NONE);
+                        cp.print("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+                        cp.print(" D: ", Attribute.BOLD, FColor.RED, BColor.NONE);
+                        cp.println("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+
+                        cp.print("E: ", Attribute.BOLD, FColor.BLUE, BColor.NONE);
+                        cp.print("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+                        cp.print(" E: ", Attribute.BOLD, FColor.RED, BColor.NONE);
+                        cp.println("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+
+                        cp.print("F: ", Attribute.BOLD, FColor.BLUE, BColor.NONE);
+                        cp.print("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+                        cp.print(" F: ", Attribute.BOLD, FColor.RED, BColor.NONE);
+                        cp.println("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+
+                        cp.print("G: ", Attribute.BOLD, FColor.BLUE, BColor.NONE);
+                        cp.print("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+                        cp.print(" G: ", Attribute.BOLD, FColor.RED, BColor.NONE);
+                        cp.println("-  -  -  -  -  -  -  -  -", Attribute.NONE, FColor.WHITE, BColor.NONE);
+                        break;
+                    case "-1":
                     case "1":
                     case "2":
                     case "3":
