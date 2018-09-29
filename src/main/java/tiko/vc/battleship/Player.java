@@ -1,5 +1,7 @@
 package battleship;
 
+import java.util.Arrays;
+
 /**
  * A class containing the data needed for the player.
  */
