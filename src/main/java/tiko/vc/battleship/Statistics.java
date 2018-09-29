@@ -56,6 +56,10 @@ public class Statistics {
      *
      */
     public final void resetShotsFired() {
+        shotAccuracy = 0;
+        shotStreak = 0;
 
+        shotsMissed = 0;
+        shotsHit = 0;
     }
 }
