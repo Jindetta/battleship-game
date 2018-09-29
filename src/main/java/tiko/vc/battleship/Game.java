@@ -39,6 +39,11 @@ public class Game {
      * Stores player information.
      */
     private Player[] players;
+    
+    /**
+     * 
+     */
+    public final Ship[] SHIPS;
 
     /**
      *
