@@ -51,7 +51,7 @@ public class Helper {
     public static final String ROW_STRING;
 
     /**
-     *
+     * Define constant for column string.
      */
     public static final String COLUMN_STRING;
 
