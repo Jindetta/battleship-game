@@ -46,7 +46,7 @@ public class Helper {
     public static final int IS_ROW = 3;
 
     /**
-     *
+     * Define constant for row string.
      */
     public static final String ROW_STRING;
 
