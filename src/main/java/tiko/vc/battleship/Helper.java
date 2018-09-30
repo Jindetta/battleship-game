@@ -31,7 +31,7 @@ public class Helper {
     public static final int IS_TOTAL = 0;
 
     /**
-     *
+     * Define constant for spacing.
      */
     public static final int IS_SPACING = 1;
 
