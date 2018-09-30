@@ -170,6 +170,11 @@ public class Game {
      */
     private Game() {
         scanner = new Scanner(System.in, "UTF-8");
+
+        players = new Player[] {
+            new Player(true, "YOU", SHIPS),
+            new Player(false, "AI", SHIPS)
+        };
     }
 
     /**
