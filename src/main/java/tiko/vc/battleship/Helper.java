@@ -36,6 +36,11 @@ public class Helper {
     public static final int IS_SPACING = 1;
 
     /**
+     * 
+     */
+    public static final int IS_COLUMN = 2;
+
+    /**
      * Define temporary static initializer to compile.
      */
     static {
