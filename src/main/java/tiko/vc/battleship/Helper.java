@@ -46,6 +46,11 @@ public class Helper {
     public static final int IS_ROW = 3;
 
     /**
+     *
+     */
+    public static final String ROW_STRING;
+
+    /**
      * Define temporary static initializer to compile.
      */
     static {
@@ -53,5 +58,6 @@ public class Helper {
         PLAYER_SPACING  = 0;
         COLUMN_PADDING = 0;
         ROW_PADDING = 0;
+        ROW_STRING = "";
     }
 }
