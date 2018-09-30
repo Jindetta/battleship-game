@@ -36,7 +36,7 @@ public class Helper {
     public static final int IS_SPACING = 1;
 
     /**
-     * 
+     * Define constant for column.
      */
     public static final int IS_COLUMN = 2;
 
