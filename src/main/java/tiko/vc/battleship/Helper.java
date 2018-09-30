@@ -51,6 +51,11 @@ public class Helper {
     public static final String ROW_STRING;
 
     /**
+     *
+     */
+    public static final String COLUMN_STRING;
+
+    /**
      * Define temporary static initializer to compile.
      */
     static {
@@ -59,5 +64,6 @@ public class Helper {
         COLUMN_PADDING = 0;
         ROW_PADDING = 0;
         ROW_STRING = "";
+        COLUMN_STRING = "";
     }
 }
