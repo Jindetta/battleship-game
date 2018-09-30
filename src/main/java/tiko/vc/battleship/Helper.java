@@ -41,7 +41,7 @@ public class Helper {
     public static final int IS_COLUMN = 2;
 
     /**
-     * 
+     * Define constant for row.
      */
     public static final int IS_ROW = 3;
 
