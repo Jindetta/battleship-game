@@ -41,6 +41,11 @@ public class Helper {
     public static final int IS_COLUMN = 2;
 
     /**
+     * 
+     */
+    public static final int IS_ROW = 3;
+
+    /**
      * Define temporary static initializer to compile.
      */
     static {
