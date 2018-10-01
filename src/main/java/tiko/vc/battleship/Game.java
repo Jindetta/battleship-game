@@ -166,7 +166,7 @@ public class Game {
     }
 
     /**
-     *
+     * Overrides default constructor.
      */
     private Game() {
         scanner = new Scanner(System.in, "UTF-8");
