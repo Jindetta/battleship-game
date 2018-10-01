@@ -65,7 +65,7 @@ public class Player {
      *
      */
     private boolean isInRange(int index) {
-        return true;
+        return index >= 0 && index < map.length;
     }
 
     /**
