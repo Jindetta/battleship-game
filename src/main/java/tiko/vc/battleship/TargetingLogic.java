@@ -25,6 +25,11 @@ public class TargetingLogic {
         rng = new Random();
     }
 
+    /**
+     * Generates random number between 0 - 9.
+     *
+     * @return int number.
+     */
     public int random() {
         return rng.nextInt(0, 10);
     }
