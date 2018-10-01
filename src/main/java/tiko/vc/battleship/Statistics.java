@@ -72,4 +72,11 @@ public class Statistics {
         gamesLost = 0;
         gamesWon = 0;
     }
+
+    /**
+     *
+     */
+    public void increaseShotsFired(boolean hit) {
+        
+    }
 }
