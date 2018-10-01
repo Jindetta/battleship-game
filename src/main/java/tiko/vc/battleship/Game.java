@@ -166,6 +166,13 @@ public class Game {
     }
 
     /**
+     *
+     */
+    private Player currentPlayerTurn() {
+        return null;
+    }
+
+    /**
      * Overrides default constructor.
      */
     private Game() {
