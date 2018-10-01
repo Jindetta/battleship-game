@@ -166,7 +166,7 @@ public class Game {
     }
 
     /**
-     *
+     * Gets current player in turn.
      */
     private Player currentPlayerTurn() {
         return players[turnIndex % players.length];
