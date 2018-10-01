@@ -62,7 +62,9 @@ public class Player {
     }
 
     /**
+     * Checks if given index is within map bounds.
      *
+     * @return True when within map bounds.
      */
     private boolean isInRange(int index) {
         return index >= 0 && index < map.length;
