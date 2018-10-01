@@ -74,7 +74,9 @@ public class Statistics {
     }
 
     /**
+     * Increases shots.
      *
+     * @param hit Hit or miss
      */
     public void increaseShotsFired(boolean hit) {
         if (hit) {
