@@ -169,7 +169,7 @@ public class Game {
      *
      */
     private Player currentPlayerTurn() {
-        return null;
+        return players[turnIndex % players.length];
     }
 
     /**
