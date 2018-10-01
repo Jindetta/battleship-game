@@ -77,6 +77,20 @@ public class Statistics {
      *
      */
     public void increaseShotsFired(boolean hit) {
-        
+        if (hit) {
+            shotsHit++;
+            currentStreak++;
+        } else {
+            shotsMissed++;
+            currentStreak = 0;
+        }
+
+        if (shotsHit > 0) {
+            shotAccuracy = (double) shotsHit / (shotsMissed + shotsHit);
+        }
+
+        if (currentStreak > shotStreak) {
+            shotStreak = currentStreak;
+        }
     }
 }
