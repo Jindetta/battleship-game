@@ -175,9 +175,9 @@ public class Game {
     }
 
     /**
+     * Gets next player in turn.
      *
-     *
-     * @return 
+     * @return Player object.
      */
     private Player nextPlayerTurn() {
         return players[++turnIndex % players.length];;
