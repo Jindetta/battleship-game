@@ -23,6 +23,8 @@ public class TargetingLogic {
      */
     public TargetingLogic() {
         rng = new Random();
+
+        priorityMap = new int[MAP_SIZE];
     }
 
     /**
