@@ -31,7 +31,7 @@ public class Game {
     public static final boolean DEBUG_MODE = true;
 
     /**
-     *
+     * Defines if overlapping is allowed.
      */
     public static final boolean OVERLAPPING_ALLOWED = false;
 
