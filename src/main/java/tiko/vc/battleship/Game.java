@@ -167,9 +167,20 @@ public class Game {
 
     /**
      * Gets current player in turn.
+     *
+     * @return Player object.
      */
     private Player currentPlayerTurn() {
         return players[turnIndex % players.length];
+    }
+
+    /**
+     *
+     *
+     * @return 
+     */
+    private Player nextPlayerTurn() {
+        return null;
     }
 
     /**
