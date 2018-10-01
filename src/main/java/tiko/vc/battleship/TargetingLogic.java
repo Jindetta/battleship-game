@@ -25,6 +25,16 @@ public class TargetingLogic {
         rng = new Random();
 
         priorityMap = new int[MAP_SIZE];
+        int currentRow = rng.nextInt(1, 3);
+
+        for (int i = 0; i < priorityMap.length; i++) {
+            int p = (i + 1) % 2;
+            priorityMap[i] = currentRow % 2 == 0 ? 1 + p : 2 - p;
+ 
+            if (COLUMNS % 2 == 0 && (i + 1) % COLUMNS == 0) {
+                currentRow++;
+            }
+        }
     }
 
     /**
