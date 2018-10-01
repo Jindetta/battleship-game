@@ -187,7 +187,7 @@ public class Game {
      *
      */
     private void setRandomPlayerTurn() {
-        
+        turnIndex = (int) (Math.random() * players.length);
     }
 
     /**
