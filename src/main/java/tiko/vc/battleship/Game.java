@@ -31,6 +31,11 @@ public class Game {
     public static final boolean DEBUG_MODE = true;
 
     /**
+     *
+     */
+    public static final boolean OVERLAPPING_ALLOWED = false;
+
+    /**
      * Stores turn index.
      */
     private int turnIndex;
