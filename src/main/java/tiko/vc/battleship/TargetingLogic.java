@@ -4,7 +4,7 @@ import java.util.Random;
 import static battleship.Game.*;
 
 /**
- * 
+ * A class that handles the targeting of shots.
  */
 public class TargetingLogic {
 	
