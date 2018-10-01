@@ -9,7 +9,7 @@ import static battleship.Game.*;
 public class TargetingLogic {
 	
     /**
-     *
+     * Define random number generator.
      */
     private Random rng;
 
