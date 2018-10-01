@@ -184,7 +184,7 @@ public class Game {
     }
 
     /**
-     *
+     * Sets next turn by random.
      */
     private void setRandomPlayerTurn() {
         turnIndex = (int) (Math.random() * players.length);
