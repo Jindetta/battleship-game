@@ -180,7 +180,7 @@ public class Game {
      * @return 
      */
     private Player nextPlayerTurn() {
-        return null;
+        return players[++turnIndex % players.length];;
     }
 
     /**
