@@ -64,7 +64,7 @@ public class Statistics {
     }
 
     /**
-     *
+     * Resets wins and losses.
      */
     public final void resetWinLossRatio() {
         winLossRatio = 0;
