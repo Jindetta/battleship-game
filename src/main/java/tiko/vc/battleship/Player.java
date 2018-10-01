@@ -62,6 +62,13 @@ public class Player {
     }
 
     /**
+     *
+     */
+    private boolean isInRange(int index) {
+        return true;
+    }
+
+    /**
      * Overrides default constructor.
      *
      * @param humanPlayer Human player.
