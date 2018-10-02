@@ -62,4 +62,11 @@ public class Statistics {
         shotsMissed = 0;
         shotsHit = 0;
     }
+
+    /**
+     *
+     */
+    public final void resetWinLossRatio() {
+        
+    }
 }
