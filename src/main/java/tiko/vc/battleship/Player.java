@@ -95,5 +95,7 @@ public class Player {
 
         setVessels(vessels);
         setName(name);
+
+        resetMap();
     }
 }
