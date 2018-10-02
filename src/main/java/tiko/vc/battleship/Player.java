@@ -75,7 +75,11 @@ public class Player {
      * Resets map data.
      */
     protected final void resetMap() {
-
+        map = new Cell[MAP_SIZE];
+ 
+        for (int i = 0; i < map.length; i++) {
+            map[i] = new Cell(!isAI());
+        }
     }
 
     /**
