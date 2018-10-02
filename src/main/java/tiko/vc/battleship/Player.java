@@ -1,6 +1,7 @@
-package battleship;
+package tiko.vc.battleship;
 
 import java.util.Arrays;
+import static tiko.vc.battleship.Game.*;
 
 /**
  * A class containing the data needed for the player.
@@ -62,6 +63,26 @@ public class Player {
     }
 
     /**
+     * Checks if given index is within map bounds.
+     *
+     * @return True when within map bounds.
+     */
+    private boolean isInRange(int index) {
+        return index >= 0 && index < map.length;
+    }
+
+    /**
+     * Resets map data.
+     */
+    protected final void resetMap() {
+        map = new Cell[MAP_SIZE];
+ 
+        for (int i = 0; i < map.length; i++) {
+            map[i] = new Cell(!isAI());
+        }
+    }
+
+    /**
      * Overrides default constructor.
      *
      * @param humanPlayer Human player.
@@ -74,5 +95,7 @@ public class Player {
 
         setVessels(vessels);
         setName(name);
+
+        resetMap();
     }
 }
