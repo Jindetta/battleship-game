@@ -1,7 +1,7 @@
-package battleship;
+package tiko.vc.battleship;
 
 import java.util.Arrays;
-import static battleship.Game.*;
+import static tiko.vc.battleship.Game.*;
 
 /**
  * A class containing the data needed for the player.
