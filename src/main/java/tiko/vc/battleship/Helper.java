@@ -1,4 +1,4 @@
-package battleship;
+package tiko.vc.battleship;
 
 /**
  * A class containing all necessary formatting for printing information.

@@ -1,4 +1,4 @@
-package battleship;
+package tiko.vc.battleship;
 
 import java.util.Scanner;
 
@@ -29,6 +29,11 @@ public class Game {
      * Defines debug mode status.
      */
     public static final boolean DEBUG_MODE = true;
+
+    /**
+     * Defines if overlapping is allowed.
+     */
+    public static final boolean OVERLAPPING_ALLOWED = false;
 
     /**
      * Stores turn index.

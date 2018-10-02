@@ -1,4 +1,4 @@
-package battleship;
+package tiko.vc.battleship;
 
 /**
  * A class containing statistics information.
@@ -61,38 +61,5 @@ public class Statistics {
 
         shotsMissed = 0;
         shotsHit = 0;
-    }
-
-    /**
-     * Resets wins and losses.
-     */
-    public final void resetWinLossRatio() {
-        winLossRatio = 0;
-
-        gamesLost = 0;
-        gamesWon = 0;
-    }
-
-    /**
-     * Increases shots.
-     *
-     * @param hit Hit or miss
-     */
-    public void increaseShotsFired(boolean hit) {
-        if (hit) {
-            shotsHit++;
-            currentStreak++;
-        } else {
-            shotsMissed++;
-            currentStreak = 0;
-        }
-
-        if (shotsHit > 0) {
-            shotAccuracy = (double) shotsHit / (shotsMissed + shotsHit);
-        }
-
-        if (currentStreak > shotStreak) {
-            shotStreak = currentStreak;
-        }
     }
 }
