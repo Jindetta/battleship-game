@@ -71,10 +71,10 @@ public class Player {
     }
 
     /**
-     *
+     * Resets map data.
      */
     protected final void resetMap() {
-        
+
     }
 
     /**
