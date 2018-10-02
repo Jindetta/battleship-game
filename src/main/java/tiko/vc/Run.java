@@ -1,4 +1,6 @@
-import battleship.Game;
+package tiko.vc;
+
+import tiko.vc.battleship.Game;
 
 /**
  * 

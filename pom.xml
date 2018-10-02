@@ -10,6 +10,14 @@
     <maven.compiler.target>8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/com.diogonunes/JCDP -->
+    <dependency>
+        <groupId>com.diogonunes</groupId>
+        <artifactId>JCDP</artifactId>
+        <version>2.0.3.1</version>
+    </dependency>
+  </dependencies>
   <build>
     <plugins>
         <plugin>
@@ -17,7 +25,7 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>1.5.0</version>
             <configuration>
-                <mainClass>Run</mainClass>
+                <mainClass>tiko.vc.Run</mainClass>
             </configuration>
         </plugin>
         <plugin>
@@ -27,7 +35,7 @@
             <configuration>
                 <archive>
                     <manifest>
-                        <mainClass>Run</mainClass>
+                        <mainClass>tiko.vc.Run</mainClass>
                     </manifest>
                 </archive>
             </configuration>

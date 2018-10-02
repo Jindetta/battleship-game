@@ -1,4 +1,4 @@
-package battleship;
+package tiko.vc.battleship;
 
 /**
  * A class containing statistics information.
@@ -31,9 +31,35 @@ public class Statistics {
     private int gamesLost;
 
     /**
+     * Records games won.
+     */
+    private int gamesWon;
+
+    /**
+     * Records win/loss ratio.
+     */
+    private double winLossRatio;
+
+    /**
+     * Records shot accuracy.
+     */
+    private double shotAccuracy;
+
+    /**
      * Override constructor.
      */
     public Statistics() {
 
+    }
+
+    /**
+     * Resets total shots fired.
+     */
+    public final void resetShotsFired() {
+        shotAccuracy = 0;
+        shotStreak = 0;
+
+        shotsMissed = 0;
+        shotsHit = 0;
     }
 }

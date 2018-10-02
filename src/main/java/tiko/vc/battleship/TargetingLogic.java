@@ -1,18 +1,10 @@
-package battleship;
-
-import java.util.Random;
-import static battleship.Game.*;
+package tiko.vc.battleship;
 
 /**
  * 
  */
 public class TargetingLogic {
 	
-    /**
-     *
-     */
-    private Random rng;
-
 	/**
 	 * Contains the information of the game map positions, and priorites the positions.
 	 */
@@ -22,10 +14,6 @@ public class TargetingLogic {
      *
      */
     public TargetingLogic() {
-        rng = new Random();
-    }
-
-    public int random() {
-        return rng.nextInt(0, 10);
+        
     }
 }
