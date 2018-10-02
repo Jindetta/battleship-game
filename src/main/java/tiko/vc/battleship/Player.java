@@ -71,6 +71,13 @@ public class Player {
     }
 
     /**
+     *
+     */
+    protected final void resetMap() {
+        
+    }
+
+    /**
      * Overrides default constructor.
      *
      * @param humanPlayer Human player.
