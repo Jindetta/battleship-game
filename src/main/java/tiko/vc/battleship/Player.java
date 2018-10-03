@@ -1,6 +1,8 @@
 package tiko.vc.battleship;
 
 import java.util.Arrays;
+import java.util.ArrayList;
+
 import static tiko.vc.battleship.Game.*;
 
 /**
