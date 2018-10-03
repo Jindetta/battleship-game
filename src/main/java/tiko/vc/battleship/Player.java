@@ -149,6 +149,13 @@ public class Player {
      * @return
      */
     protected boolean placeShip(int index, Directions direction, Ship ship) { 
+        List<Integer> indices = getFreeAxis(index, direction, ship.getLength());
+ 
+        if (indices != null) {
+            indices.stream().forEach(i -> map[i].type = ship.getId());
+            return true;
+        }
+
         return false;
     }
 
