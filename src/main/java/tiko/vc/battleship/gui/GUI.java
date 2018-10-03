@@ -13,6 +13,9 @@ public class GUI extends JFrame {
 	private final static int WINDOW_WIDTH = 800;
 	private final static int WINDOW_HEIGHT = 600;
 	
+	private BoardPanel playerBoard;
+	private BoardPanel botBoard;
+	
 	/**
 	 * TODO
 	 */
