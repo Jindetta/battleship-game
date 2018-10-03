@@ -18,7 +18,7 @@ public class BoardPanel extends JPanel {
 	 * 
 	 */
 	public BoardPanel() {
-		super(new GridLayout());
+		super(new GridLayout(10, 10));
 		
 		setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		setSize(BOARD_WIDTH, BOARD_HEIGHT);
