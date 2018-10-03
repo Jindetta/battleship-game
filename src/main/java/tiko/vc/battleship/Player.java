@@ -119,6 +119,17 @@ public class Player {
     }
 
     /**
+     *
+     *
+     * @param index
+     *
+     * @return
+     */
+    private boolean isOverlapping(int index) {
+        return false;
+    }
+
+    /**
      * Resets map data.
      */
     protected final void resetMap() {
