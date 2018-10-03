@@ -1,4 +1,4 @@
-package tiko.vc.battleship;
+package tiko.vc.battleship.gui;
 
 import javax.swing.JFrame;
 

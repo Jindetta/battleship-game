@@ -1,7 +1,7 @@
 package tiko.vc;
 
-import tiko.vc.battleship.GUI;
 import tiko.vc.battleship.Game;
+import tiko.vc.battleship.gui.GUI;
 
 /**
  * 
