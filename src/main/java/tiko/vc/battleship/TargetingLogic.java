@@ -1,5 +1,7 @@
 package tiko.vc.battleship;
 
+import java.util.Random;
+
 /**
  * A class that handles the targeting of shots.
  */
