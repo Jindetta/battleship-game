@@ -15,7 +15,7 @@ public class BoardPanel extends JPanel {
 	public BoardPanel() {
 		super(new GridLayout());
 		
-		setSize(5,5);
+		setSize(BOARD_WIDTH, BOARD_HEIGHT);
 	}
 	
 }
