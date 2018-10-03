@@ -77,9 +77,45 @@ public class Player {
      * @param index
      * @param direction
      * @param length
+     *
+     * @return
      */
     private ArrayList<Integer> getFreeAxis(int index, char direction, int length) {
-        return null;
+        ArrayList<Integer> points = new ArrayList<>();
+ 
+        switch (direction) {
+            case DIRECTION_W:
+                index -= length - 1;
+            case DIRECTION_E:
+ 
+                for (int x = index; x < (index + length); x++) {
+                    if (hasCollision(x, index, true)
+                    || isOverlapping(x, isManual)) {
+                        return null;
+                    }
+ 
+                    points.add(x);
+                }
+ 
+                break;
+            case DIRECTION_N:
+                index -= (length - 1) * COLUMNS;
+            case DIRECTION_S:
+                for (int x = index;
+                     x < (index + (length * COLUMNS)); x += COLUMNS) {
+ 
+                    if (hasCollision(x, index, false)
+                    || isOverlapping(x, isManual)) {
+                        return null;
+                    }
+ 
+                    points.add(x);
+                }
+ 
+                break;
+        }
+ 
+        return points;
     }
 
     /**
