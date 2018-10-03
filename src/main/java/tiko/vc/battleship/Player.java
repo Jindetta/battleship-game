@@ -82,7 +82,7 @@ public class Player {
      *
      * @return
      */
-    private ArrayList<Integer> getFreeAxis(int index, char direction, int length) {
+    private ArrayList<Integer> getFreeAxis(int index, Directions direction, int length) {
         ArrayList<Integer> points = new ArrayList<>();
  
         switch (direction) {
@@ -91,8 +91,7 @@ public class Player {
             case DIRECTION_E:
  
                 for (int x = index; x < (index + length); x++) {
-                    if (hasCollision(x, index, true)
-                    || isOverlapping(x, isManual)) {
+                    if (hasCollision(x, index, true) || isOverlapping(x)) {
                         return null;
                     }
  
@@ -106,8 +105,7 @@ public class Player {
                 for (int x = index;
                      x < (index + (length * COLUMNS)); x += COLUMNS) {
  
-                    if (hasCollision(x, index, false)
-                    || isOverlapping(x, isManual)) {
+                    if (hasCollision(x, index, false) || isOverlapping(x)) {
                         return null;
                     }
  
