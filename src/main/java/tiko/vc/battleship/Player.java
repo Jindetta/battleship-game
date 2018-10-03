@@ -72,6 +72,17 @@ public class Player {
     }
 
     /**
+     *
+     *
+     * @param index
+     * @param direction
+     * @param length
+     */
+    private ArrayList<Integer> getFreeAxis(int index, char direction, int length) {
+        return null;
+    }
+
+    /**
      * Resets map data.
      */
     protected final void resetMap() {
