@@ -140,6 +140,19 @@ public class Player {
     }
 
     /**
+     *
+     *
+     * @param index
+     * @param direction
+     * @param ship
+     *
+     * @return
+     */
+    protected boolean placeShip(int index, Directions direction, Ship ship) { 
+        return false;
+    }
+
+    /**
      * Resets map data.
      */
     protected final void resetMap() {
