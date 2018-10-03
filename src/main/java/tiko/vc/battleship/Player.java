@@ -121,6 +121,19 @@ public class Player {
     /**
      *
      *
+     * @param currentIndex
+     * @param startIndex
+     * @param vertical
+     *
+     * @return
+     */
+    private boolean hasCollision(int currentIndex, int startIndex, boolean vertical) {
+        return false;
+    }
+
+    /**
+     *
+     *
      * @param index
      *
      * @return
