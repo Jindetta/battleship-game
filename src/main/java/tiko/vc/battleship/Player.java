@@ -126,7 +126,13 @@ public class Player {
      * @return
      */
     private boolean hasCollision(int currentIndex, int startIndex, boolean vertical) {
-        return false;
+        if (isInRange(currentIndex)) {
+            if ((!vertical && currentIndex % COLUMNS == startIndex % COLUMNS) || (vertical && currentIndex / COLUMNS == startIndex / COLUMNS)) {
+                return map[currentIndex].type != 0;
+            }
+        }
+ 
+        return true;
     }
 
     /**
