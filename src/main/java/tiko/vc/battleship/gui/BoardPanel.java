@@ -6,7 +6,8 @@ import javax.swing.JPanel;
 
 public class BoardPanel extends JPanel {
 	
-	public static final int BOARD_WIDTH = GUI.WIDTH / 2 - 50;
+	public static final int BOARD_WIDTH = GUI.WIDTH / 2 - 60;
+	public static final int BOARD_HEIGHT = GUI.HEIGHT / 2 - 40;
 	
 	/**
 	 * 
