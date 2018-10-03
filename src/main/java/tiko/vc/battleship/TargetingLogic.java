@@ -36,4 +36,11 @@ public class TargetingLogic {
             }
         }
     }
+
+    /**
+     *
+     */
+    private int getHighestPriorityValue() {
+        return 0;
+    }
 }
