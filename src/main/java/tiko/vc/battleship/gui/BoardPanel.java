@@ -1,8 +1,13 @@
 package tiko.vc.battleship.gui;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
 import javax.swing.JPanel;
+
+
 
 public class BoardPanel extends JPanel {
 	
@@ -15,6 +20,7 @@ public class BoardPanel extends JPanel {
 	public BoardPanel() {
 		super(new GridLayout());
 		
+		setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		setSize(BOARD_WIDTH, BOARD_HEIGHT);
 	}
 	
