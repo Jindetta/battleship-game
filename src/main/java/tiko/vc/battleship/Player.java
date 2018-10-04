@@ -1,6 +1,9 @@
 package tiko.vc.battleship;
 
 import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+
 import static tiko.vc.battleship.Game.*;
 
 /**
@@ -69,6 +72,98 @@ public class Player {
      */
     private boolean isInRange(int index) {
         return index >= 0 && index < map.length;
+    }
+
+    /**
+     *
+     *
+     * @param index
+     * @param direction
+     * @param length
+     *
+     * @return
+     */
+    private ArrayList<Integer> getFreeAxis(int index, Directions direction, int length) {
+        ArrayList<Integer> indices = new ArrayList<>();
+ 
+        switch (direction) {
+            case DIRECTION_W:
+                index -= length - 1;
+            case DIRECTION_E:
+                for (int x = index; x < (index + length); x++) {
+                    if (hasCollision(x, index, true) || isOverlapping(x)) {
+                        return null;
+                    }
+ 
+                    indices.add(x);
+                }
+ 
+                break;
+            case DIRECTION_N:
+                index -= (length - 1) * COLUMNS;
+            case DIRECTION_S:
+                for (int x = index; x < (index + (length * COLUMNS)); x += COLUMNS) {
+                    if (hasCollision(x, index, false) || isOverlapping(x)) {
+                        return null;
+                    }
+ 
+                    indices.add(x);
+                }
+ 
+                break;
+        }
+ 
+        return indices;
+    }
+
+    /**
+     *
+     *
+     * @param currentIndex
+     * @param startIndex
+     * @param vertical
+     *
+     * @return
+     */
+    private boolean hasCollision(int currentIndex, int startIndex, boolean vertical) {
+        if (isInRange(currentIndex)) {
+            if ((!vertical && currentIndex % COLUMNS == startIndex % COLUMNS) || (vertical && currentIndex / COLUMNS == startIndex / COLUMNS)) {
+                return map[currentIndex].type != 0;
+            }
+        }
+ 
+        return true;
+    }
+
+    /**
+     *
+     *
+     * @param index
+     *
+     * @return
+     */
+    private boolean isOverlapping(int index) {
+        return false;
+    }
+
+    /**
+     *
+     *
+     * @param index
+     * @param direction
+     * @param ship
+     *
+     * @return
+     */
+    protected boolean placeShip(int index, Directions direction, Ship ship) { 
+        List<Integer> indices = getFreeAxis(index, direction, ship.getLength());
+ 
+        if (indices != null) {
+            indices.stream().forEach(i -> map[i].type = ship.getId());
+            return true;
+        }
+
+        return false;
     }
 
     /**
