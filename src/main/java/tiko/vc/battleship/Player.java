@@ -188,6 +188,13 @@ public class Player {
     }
 
     /**
+     *
+     */
+    protected void generateShips() {
+        
+    }
+
+    /**
      * Resets map data.
      */
     protected final void resetMap() {
