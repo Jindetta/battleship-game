@@ -97,7 +97,9 @@ public class Statistics {
     }
 
     /**
+     * Increases games played.
      *
+     * @param win Win or loss
      */
     public void increaseGamesPlayed(boolean win) {
 
