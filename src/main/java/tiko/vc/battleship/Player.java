@@ -199,7 +199,17 @@ public class Player {
      *
      */
     protected void generateShips() {
-        
+        Random rng = new Random();
+
+        Directions direction;
+        int index;
+
+        for (int i = (vessels.length - 1); i >= 0; i--) {
+            do {
+                index = rng.nextInt(map.length);
+                direction = randomEnum(rng, Directions.class);
+            } while (!placeShip(index, direction, vessels[i]));
+        }
     }
 
     /**
