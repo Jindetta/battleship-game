@@ -44,9 +44,19 @@ public class TargetingLogic {
     }
 
     /**
-     *
+     * Gets highest available priority from the map.
+     * 
+     * @return value with highest priority
      */
     private int getHighestPriorityValue() {
-        return 0;
+        int highestValue = IGNORE_PRIORITY;
+
+        for (int priority : priorityMap) {
+            if (priority > highestValue) {
+                highestValue = priority;
+            }
+        }
+
+        return highestValue;
     }
 }
