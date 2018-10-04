@@ -20,6 +20,11 @@ public class TargetingLogic {
 	private int[] priorityMap;
 
     /**
+     * Define a priority for ignored cells.
+     */
+    private final static int IGNORE_PRIORITY = 0;
+
+    /**
      *
      */
     public TargetingLogic() {
