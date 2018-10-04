@@ -169,6 +169,14 @@ public class Player {
 
     /**
      *
+     */
+    private static <T extends Enum<?>> T randomEnum(Random rng, Class<T> e){
+        int value = rng.nextInt(e.getEnumConstants().length);
+        return e.getEnumConstants()[value];
+    }
+
+    /**
+     *
      *
      * @param index
      * @param direction
