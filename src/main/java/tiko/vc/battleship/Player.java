@@ -143,6 +143,26 @@ public class Player {
      * @return
      */
     private boolean isOverlapping(int index) {
+        if (!OVERLAPPING_ALLOWED) {
+            final int[] NEIGHBOUR_CELLS = {
+                index - COLUMNS, index + COLUMNS, index - 1, index + 1
+            };
+
+            int collisionSum = 0;
+
+            for (int value : NEIGHBOUR_CELLS) {
+                boolean isVertical = Math.abs(value - index) > 1;
+                boolean notHorizontal = !isVertical && value % COLUMNS != index % COLUMNS;
+                boolean notVertical = isVertical &&value / COLUMNS != index / COLUMNS;
+
+                if (isInRange(value) && (notHorizontal || notVertical)) {
+                    collisionSum += map[value].type;
+                }
+            }
+
+            return collisionSum > 0;
+        }
+
         return false;
     }
 
