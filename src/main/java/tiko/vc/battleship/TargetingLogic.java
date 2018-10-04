@@ -77,4 +77,15 @@ public class TargetingLogic {
  
         return priorities;
     }
+
+    /**
+     * Picks random cell from priority map.
+     *
+     * @return cell index
+     */
+    private int getRandomShotIndex() {
+        ArrayList<Integer> indexes = getPriorityList();
+ 
+        return indexes.get(rng.nextInt(indexes.size()));
+    }
 }
