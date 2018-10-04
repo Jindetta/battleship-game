@@ -95,4 +95,11 @@ public class Statistics {
             shotStreak = currentStreak;
         }
     }
+
+    /**
+     *
+     */
+    public void increaseGamesPlayed(boolean win) {
+
+    }
 }
