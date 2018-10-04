@@ -2,6 +2,7 @@ package tiko.vc.battleship;
 
 import java.util.Random;
 import static tiko.vc.battleship.Game.*;
+import java.util.Arraylist;
 
 /**
  * A class that handles the targeting of shots.
