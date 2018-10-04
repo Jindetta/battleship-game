@@ -59,4 +59,22 @@ public class TargetingLogic {
 
         return highestValue;
     }
+
+    /**
+     * Gets list of cells with highest priority.
+     *
+     * @return a list of cells
+     */
+    private ArrayList<Integer> getPriorityList() {
+        int highestPriority = getHighestPriorityValue();
+        ArrayList<Integer> priorities = new ArrayList<>();
+ 
+        for (int i = 0; i < priorityMap.length; i++) {
+            if (priorityMap[i] == highestPriority) {
+                priorities.add(i);
+            }
+        }
+ 
+        return priorities;
+    }
 }
