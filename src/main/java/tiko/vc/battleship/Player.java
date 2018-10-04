@@ -2,6 +2,7 @@ package tiko.vc.battleship;
 
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.List;
 
 import static tiko.vc.battleship.Game.*;
