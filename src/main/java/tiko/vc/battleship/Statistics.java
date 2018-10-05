@@ -102,6 +102,14 @@ public class Statistics {
      * @param win Win or loss
      */
     public void increaseGamesPlayed(boolean win) {
+        if (win) {
+            gamesWon++;
+        } else {
+            gamesLost++;
+        }
 
+        if (gamesWon > 0) {
+            winLossRatio = (double) gamesWon / (gamesLost + gamesWon);
+        }
     }
 }
