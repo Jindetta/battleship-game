@@ -112,4 +112,11 @@ public class Statistics {
             winLossRatio = (double) gamesWon / (gamesLost + gamesWon);
         }
     }
+
+    /**
+     *
+     */
+    public double getShotAccuracy() {
+        
+    }
 }
