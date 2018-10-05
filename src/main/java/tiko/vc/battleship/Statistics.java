@@ -114,7 +114,9 @@ public class Statistics {
     }
 
     /**
+     * Gets shot accuracy.
      *
+     * @return shot accuracy percentage
      */
     public double getShotAccuracy() {
         return shotAccuracy * 100;
