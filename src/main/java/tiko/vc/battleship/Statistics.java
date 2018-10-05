@@ -117,6 +117,6 @@ public class Statistics {
      *
      */
     public double getShotAccuracy() {
-        
+        return shotAccuracy * 100;
     }
 }
