@@ -133,4 +133,8 @@ public class Statistics {
     public double getWinLossRatio() {
         return winLossRatio * 100;
     }
+
+    public String toString() {
+
+    }
 }
