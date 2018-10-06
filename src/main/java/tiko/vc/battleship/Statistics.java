@@ -126,7 +126,9 @@ public class Statistics {
     }
 
     /**
+     * Gets win/loss ratio.
      *
+     * @return win/loss percentage
      */
     public double getWinLossRatio() {
         return winLossRatio * 100;
