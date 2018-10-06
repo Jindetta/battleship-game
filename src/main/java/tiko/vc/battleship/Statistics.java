@@ -124,4 +124,11 @@ public class Statistics {
     public double getShotAccuracy() {
         return shotAccuracy * 100;
     }
+
+    /**
+     *
+     */
+    public double getWinLossRatio() {
+
+    }
 }
