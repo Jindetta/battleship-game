@@ -134,6 +134,7 @@ public class Statistics {
         return winLossRatio * 100;
     }
 
+    @Override
     public String toString() {
         String results = "Games played: " + (gamesWon + gamesLost) + "\n";
 
