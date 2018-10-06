@@ -135,6 +135,15 @@ public class Statistics {
     }
 
     public String toString() {
+        String results = "Games played: " + (gamesWon + gamesLost) + "\n";
 
+        results += "Win/Loss ratio: " + getWinLossRatio()
+                + "% (W" + gamesWon + "/L" + gamesLost + ")\n";
+        results += "Shots fired: " + (shotsHit + shotsMissed) + "\n";
+        results += "Shot accuracy: " + getShotAccuracy()
+                + "% (H" + shotsHit + "/M" + shotsMissed + ")\n";
+        results += "Longest streak of continued hits: " + shotStreak;
+
+        return results;
     }
 }
