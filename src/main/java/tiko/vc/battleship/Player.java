@@ -1,6 +1,7 @@
 package tiko.vc.battleship;
 
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.List;
