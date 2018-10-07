@@ -99,5 +99,10 @@ public class TargetingLogic {
          */
         private int currentLogic;
 
+        /**
+         * Define shot value and origin.
+         */
+        protected int shotValue, shotOrigin;
+
     }
 }
