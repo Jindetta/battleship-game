@@ -32,9 +32,9 @@ public class Cell {
     }
 
     /**
+     * Sets ship information.
      *
-     *
-     * @param
+     * @param shipData Ship object.
      */
     public void setShipData(Ship shipData) {
         this.shipData = Optional.ofNullable(shipData);
