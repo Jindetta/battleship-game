@@ -117,6 +117,11 @@ public class Statistics {
         }
     }
 
+    /**
+     * Sets games won number.
+     *
+     * @param gamesWon number of games won
+     */
     public void setGamesWon(int gamesWon) {
         this.gamesWon = gamesWon;
     }
