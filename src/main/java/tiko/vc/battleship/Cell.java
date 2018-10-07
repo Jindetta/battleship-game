@@ -65,6 +65,9 @@ public class Cell {
      */
     public Cell(boolean visible) {
         this.visible = visible;
+
+        setShipData(null);
+        setShot(false);
     }
 
     /**
