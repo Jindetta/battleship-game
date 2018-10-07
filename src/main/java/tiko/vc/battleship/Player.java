@@ -67,6 +67,17 @@ public class Player {
     }
 
     /**
+     *
+     *
+     * @param index
+     *
+     * @return
+     */
+    private boolean isCellShot(int index) {
+        return map[index % map.length].shot;
+    }
+
+    /**
      * Checks if given index is within map bounds.
      *
      * @return True when within map bounds.
