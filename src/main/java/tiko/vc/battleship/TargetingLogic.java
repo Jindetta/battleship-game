@@ -104,5 +104,10 @@ public class TargetingLogic {
          */
         protected int shotValue, shotOrigin;
 
+        /**
+         * Define array for logic data.
+         */
+        private int[] logicData;
+
     }
 }
