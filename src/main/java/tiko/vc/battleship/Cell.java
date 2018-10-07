@@ -10,7 +10,7 @@ public class Cell {
     /**
      * Define Ship object in this cell.
      */
-    private Ship data;
+    private Optional<Ship> data;
 
     /**
      * Define if cell was shot. Defaults to false.
