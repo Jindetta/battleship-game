@@ -1,5 +1,7 @@
 package tiko.vc.battleship;
 
+import java.util.Optional;
+
 /**
  * A class containing an individual cell data.
  */
