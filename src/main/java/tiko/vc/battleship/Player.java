@@ -74,7 +74,7 @@ public class Player {
      * @return
      */
     private boolean isCellShot(int index) {
-        return map[index % map.length].shot;
+        return map[index % map.length].isShot();
     }
 
     /**
@@ -140,7 +140,7 @@ public class Player {
     private boolean hasCollision(int currentIndex, int startIndex, boolean vertical) {
         if (isInRange(currentIndex)) {
             if ((!vertical && currentIndex % COLUMNS == startIndex % COLUMNS) || (vertical && currentIndex / COLUMNS == startIndex / COLUMNS)) {
-                return map[currentIndex].type != 0;
+                return map[currentIndex].getShipData().isPresent();
             }
         }
  
@@ -168,7 +168,7 @@ public class Player {
                 boolean notVertical = isVertical &&value / COLUMNS != index / COLUMNS;
 
                 if (isInRange(value) && (notHorizontal || notVertical)) {
-                    collisionSum += map[value].type;
+                    map[value].getShipData().ifPresent(s -> collisionSum += s.getLength());
                 }
             }
 
@@ -199,7 +199,7 @@ public class Player {
         List<Integer> indices = getFreeAxis(index, direction, ship.getLength());
  
         if (indices != null) {
-            indices.stream().forEach(i -> map[i].type = ship.getId());
+            indices.stream().forEach(i -> map[i].setShipData(ship));
             return true;
         }
 
@@ -232,7 +232,9 @@ public class Player {
      */
     protected boolean shootTo(int index) {
         if (isInRange(index) && !isCellShot(index)) {
-            return map[index % map.length].shot = true;
+            map[index % map.length].setShot(true);
+
+            return true;
         }
  
         return false;
