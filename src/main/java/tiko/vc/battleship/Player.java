@@ -162,7 +162,7 @@ public class Player {
                 index - COLUMNS, index + COLUMNS, index - 1, index + 1
             };
 
-            int collisionSum = 0;
+            AtomicInteger collisionSum = new AtomicInteger(0);
 
             for (int value : NEIGHBOUR_CELLS) {
                 boolean isVertical = Math.abs(value - index) > 1;
@@ -170,11 +170,11 @@ public class Player {
                 boolean notVertical = isVertical &&value / COLUMNS != index / COLUMNS;
 
                 if (isInRange(value) && (notHorizontal || notVertical)) {
-                    map[value].getShipData().ifPresent(s -> collisionSum += s.getLength());
+                    map[value].getShipData().ifPresent(s -> collisionSum.addAndGet(s.getLength()));
                 }
             }
 
-            return collisionSum > 0;
+            return collisionSum.get() > 0;
         }
 
         return false;
