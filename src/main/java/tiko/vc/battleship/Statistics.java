@@ -117,8 +117,8 @@ public class Statistics {
         }
     }
 
-    public void setGamesWon() {
-        
+    public void setGamesWon(int gamesWon) {
+        this.gamesWon = gamesWon;
     }
 
     /**
