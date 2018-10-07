@@ -224,6 +224,21 @@ public class Player {
     }
 
     /**
+     *
+     *
+     * @param index
+     *
+     * @return
+     */
+    protected boolean shootTo(int index) {
+        if (isInRange(index) && !isCellShot(index)) {
+            return map[index % map.length].shot = true;
+        }
+ 
+        return false;
+    }
+
+    /**
      * Resets map data.
      */
     protected final void resetMap() {
