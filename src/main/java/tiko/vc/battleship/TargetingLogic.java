@@ -94,5 +94,10 @@ public class TargetingLogic {
      */
     private class HitLogic {
 
+        /**
+         * Define current logic to process.
+         */
+        private int currentLogic;
+
     }
 }
