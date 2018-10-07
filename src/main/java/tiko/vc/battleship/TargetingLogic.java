@@ -115,6 +115,17 @@ public class TargetingLogic {
         private int[] logicData;
 
         /**
+         * Override constructor.
+         * 
+         * @param index Cell index
+         * @param value Cell type
+         */
+        public HitLogic(int index, int value) {
+            shotValue = value;
+            resetLogic(index);
+        }
+
+        /**
          * Resets logic data.
          * 
          * @param index Cell index
