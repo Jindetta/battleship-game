@@ -88,4 +88,11 @@ public class TargetingLogic {
  
         return indexes.get(rng.nextInt(indexes.size()));
     }
+
+    /**
+     * A class containing logic when shot is hit.
+     */
+    private class HitLogic {
+
+    }
 }
