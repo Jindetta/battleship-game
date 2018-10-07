@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.List;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 import static tiko.vc.battleship.Game.*;
 
 /**
