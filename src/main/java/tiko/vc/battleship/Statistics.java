@@ -52,7 +52,7 @@ public class Statistics {
      * Override constructor.
      */
     public Statistics() {
-
+        resetShotsFired();
     }
 
     /**
