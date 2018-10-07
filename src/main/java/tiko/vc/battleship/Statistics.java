@@ -53,6 +53,7 @@ public class Statistics {
      */
     public Statistics() {
         resetShotsFired();
+        resetWinLossRatio();
     }
 
     /**
