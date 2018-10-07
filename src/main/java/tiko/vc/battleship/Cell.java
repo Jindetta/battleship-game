@@ -41,6 +41,15 @@ public class Cell {
     }
 
     /**
+     *
+     *
+     * @return
+     */
+    public boolean isShot() {
+        return shot;
+    }
+
+    /**
      * Override constructor.
      *
      * @param visible Cell visibility
