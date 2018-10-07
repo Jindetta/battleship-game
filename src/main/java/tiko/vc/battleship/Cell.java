@@ -23,6 +23,15 @@ public class Cell {
     private boolean visible = true;
 
     /**
+     *
+     *
+     * @return
+     */
+    public Optional<Ship> getShipData() {
+        return shipData;
+    }
+
+    /**
      * Override constructor.
      *
      * @param visible Cell visibility
