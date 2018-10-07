@@ -199,7 +199,7 @@ public class Player {
      * @return
      */
     protected boolean placeShip(int index, Directions direction, Ship ship) { 
-        Optional<List<Integer>> indices = getFreeAxis(index, direction, ship.getLength());
+        Optional<ArrayList<Integer>> indices = getFreeAxis(index, direction, ship.getLength());
  
         indices.ifPresent(list -> list.stream().forEach(i -> map[i].setShipData(ship)));
         return indices.isPresent();
