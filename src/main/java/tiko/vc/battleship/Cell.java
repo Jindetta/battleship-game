@@ -50,6 +50,15 @@ public class Cell {
     }
 
     /**
+     *
+     *
+     * @param shot
+     */
+    public void setShot(boolean shot) {
+        this.shot = shot;
+    }
+
+    /**
      * Override constructor.
      *
      * @param visible Cell visibility
