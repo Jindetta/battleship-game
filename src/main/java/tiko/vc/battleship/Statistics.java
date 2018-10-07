@@ -117,6 +117,10 @@ public class Statistics {
         }
     }
 
+    public void setGamesWon() {
+        
+    }
+
     /**
      * Gets shot accuracy.
      *
