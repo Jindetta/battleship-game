@@ -81,7 +81,7 @@ public class Cell {
     public String toString() {
         char value = '-';
 
-        if (type != 0) {
+        if (shipData.isPresent()) {
             if (shot) {
                 value = 'X';
             } else {
@@ -90,7 +90,7 @@ public class Cell {
                 }
 
                 if (Game.DEBUG_MODE) {
-                    value = (char) type;
+                    value = (char) shipData.get().getId();
                 }
             }
         } else if (shot) {
