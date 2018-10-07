@@ -32,6 +32,15 @@ public class Cell {
     }
 
     /**
+     *
+     *
+     * @param
+     */
+    public void setShipData(Ship shipData) {
+        this.shipData = Optional.ofNullable(shipData);
+    }
+
+    /**
      * Override constructor.
      *
      * @param visible Cell visibility
