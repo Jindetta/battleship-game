@@ -114,5 +114,20 @@ public class TargetingLogic {
          */
         private int[] logicData;
 
+        /**
+         * Resets logic data.
+         * 
+         * @param index Cell index
+         */
+        private void resetLogic(int index) {
+            shotOrigin = index;
+            logicData = new int[]{1, 1, 1, 1};
+            currentLogic = rng.nextInt(logicData.length);
+ 
+            if (index == INVALID_VALUE) {
+                logics.remove(this);
+            }
+        }
+
     }
 }
