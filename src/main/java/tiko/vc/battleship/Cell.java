@@ -6,9 +6,9 @@ package tiko.vc.battleship;
 public class Cell {
 
     /**
-     * Define ship type in this cell. Defaults to none.
+     * Define Ship object in this cell.
      */
-    public int type = 0;
+    private Ship data;
 
     /**
      * Define if cell was shot. Defaults to false.
