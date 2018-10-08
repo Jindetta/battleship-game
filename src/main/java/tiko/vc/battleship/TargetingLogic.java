@@ -95,6 +95,26 @@ public class TargetingLogic {
     }
 
     /**
+     * Gets next available index from logic.
+     *
+     * @return cell index
+     */
+    public int nextShotIndex() {
+        if (!logics.isEmpty()) {
+            HitLogic logic = logics.get(0);
+ 
+            if (!logic.hasLogic()) {
+                logic.nextLogic();
+                return nextShotIndex();
+            }
+ 
+            return logic.processLogic();
+        }
+ 
+        return getRandomShotIndex();
+    }
+
+    /**
      * A class containing logic when shot is hit.
      */
     private class HitLogic {
