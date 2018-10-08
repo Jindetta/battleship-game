@@ -177,5 +177,14 @@ public class TargetingLogic {
  
             return false;
         }
+
+        /**
+         * Gets current logic and move to next one.
+         *
+         * @return current logic data
+         */
+        private int getLogic() {
+            return logicData[currentLogic]++;
+        }
     }
 }
