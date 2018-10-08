@@ -135,8 +135,8 @@ public class Statistics {
         return this.gamesWon;
     }
 
-    public void setGamesLost() {
-
+    public void setGamesLost(int gamesLost) {
+        this.gamesLost = gamesLost;
     }
 
     /**
