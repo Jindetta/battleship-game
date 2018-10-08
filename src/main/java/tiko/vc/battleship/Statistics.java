@@ -126,6 +126,11 @@ public class Statistics {
         this.gamesWon = gamesWon;
     }
 
+    /**
+     * Gets games won number.
+     *
+     * @return gamesWon number of games won
+     */
     public int getGamesWon() {
         return this.gamesWon;
     }
