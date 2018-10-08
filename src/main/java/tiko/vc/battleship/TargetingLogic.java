@@ -115,6 +115,37 @@ public class TargetingLogic {
     }
 
     /**
+     * Creates new shot logic data.
+     * 
+     * @param index Cell index
+     * @param value Cell type
+     */
+    public void setShotData(int index, int value) {
+        priorityMap[index] = IGNORE_PRIORITY;
+ 
+        if (value > 0) {
+            for (HitLogic logic : logics) {
+                if (logic.shotValue == value) {
+                    return;
+                }
+            }
+ 
+            logics.add(new HitLogic(index, value));
+        } else if (!logics.isEmpty()) {
+            if (value < 0) {
+                for (HitLogic logic : logics) {
+                    if (logic.shotValue == Math.abs(value)) {
+                        logic.resetLogic(INVALID_VALUE);
+                        break;
+                    }
+                }
+            } else {
+                logics.get(0).nextLogic();
+            }
+        }
+    }
+
+    /**
      * A class containing logic when shot is hit.
      */
     private class HitLogic {
