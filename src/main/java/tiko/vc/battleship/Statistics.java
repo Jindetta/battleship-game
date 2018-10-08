@@ -127,7 +127,7 @@ public class Statistics {
     }
 
     public int getGamesWon() {
-
+        return this.gamesWon;
     }
 
     /**
