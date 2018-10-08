@@ -158,5 +158,24 @@ public class TargetingLogic {
  
             currentLogic = ++currentLogic % logicData.length;
         }
+
+        /**
+         * Checks if logic is valid.
+         * 
+         * @param index Cell index
+         * 
+         * @return true if index is valid, otherwise false
+         */
+        private boolean isValidLogic(int index) {
+            if (index >= 0 && index < MAP_SIZE) {
+                if ((index % COLUMNS == shotOrigin % COLUMNS)
+                || (index / COLUMNS == shotOrigin / COLUMNS)) {
+                    return index != shotOrigin
+                           && priorityMap[index] > IGNORE_PRIORITY;
+                }
+            }
+ 
+            return false;
+        }
     }
 }
