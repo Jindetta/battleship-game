@@ -179,6 +179,38 @@ public class TargetingLogic {
         }
 
         /**
+         * Processes current logic.
+         * 
+         * @return index of next valid logic.
+         */
+        private int processLogic() {
+            int index = getLogic();
+ 
+            switch (currentLogic) {
+                case 0:
+                    index = shotOrigin - (index * COLUMNS);
+                    break;
+                case 1:
+                    index = shotOrigin + (index * COLUMNS);
+                    break;
+                case 2:
+                    index = shotOrigin - index;
+                    break;
+                case 3:
+                    index = shotOrigin + index;
+                    break;
+            }
+ 
+            if (isValidLogic(index)) {
+                return index;
+            }
+ 
+            nextLogic();
+ 
+            return shotOrigin != INVALID_VALUE ? processLogic() : INVALID_VALUE;
+        }
+
+        /**
          * Gets current logic and move to next one.
          *
          * @return current logic data
