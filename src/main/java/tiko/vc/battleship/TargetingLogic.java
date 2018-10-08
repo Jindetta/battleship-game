@@ -186,5 +186,14 @@ public class TargetingLogic {
         private int getLogic() {
             return logicData[currentLogic]++;
         }
+
+        /**
+         * Checks if logic is not invalidated.
+         * 
+         * @return true if logic is valid, otherwise false
+         */
+        private boolean hasLogic() {
+            return logicData[currentLogic] != INVALID_VALUE;
+        }
     }
 }
