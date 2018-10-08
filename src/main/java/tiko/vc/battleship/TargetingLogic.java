@@ -33,6 +33,7 @@ public class TargetingLogic {
      *
      */
     public TargetingLogic() {
+        logics = new ArrayList<>();
         rng = new Random();
 
         priorityMap = new int[MAP_SIZE];
