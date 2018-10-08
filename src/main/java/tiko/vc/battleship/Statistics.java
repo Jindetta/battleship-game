@@ -126,6 +126,10 @@ public class Statistics {
         this.gamesWon = gamesWon;
     }
 
+    public int getGamesWon() {
+
+    }
+
     /**
      * Gets shot accuracy.
      *
