@@ -1,5 +1,6 @@
 /target/*
 
-*.class
-*.stackdump
-*.log
+*hs_err_pid*
+**.stackdump
+**.log
+**.iml
