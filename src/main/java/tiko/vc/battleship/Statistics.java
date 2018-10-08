@@ -135,6 +135,10 @@ public class Statistics {
         return this.gamesWon;
     }
 
+    public void setGamesLost() {
+
+    }
+
     /**
      * Gets shot accuracy.
      *
