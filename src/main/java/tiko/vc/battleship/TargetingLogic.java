@@ -140,5 +140,23 @@ public class TargetingLogic {
             }
         }
 
+        /**
+         * Jumps to next logic if there is one.
+         */
+        private void nextLogic() {
+            logicData[currentLogic] = INVALID_VALUE;
+            int logicSum = 0;
+ 
+            for (int value : logicData) {
+                logicSum += value;
+ 
+                if (logicSum == -logicData.length) {
+                    resetLogic(INVALID_VALUE);
+                    return;
+                }
+            }
+ 
+            currentLogic = ++currentLogic % logicData.length;
+        }
     }
 }
