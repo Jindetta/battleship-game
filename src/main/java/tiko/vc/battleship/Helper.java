@@ -116,6 +116,13 @@ public class Helper {
     }
 
     /**
+     * 
+     */
+    private static String createColumnString() {
+        return "";
+    }
+
+    /**
      * Define temporary static initializer to compile.
      */
     static {
