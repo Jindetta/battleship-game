@@ -109,7 +109,7 @@ public class Helper {
     }
 
     /**
-     *
+     * Wraps print function (System).
      */
     public static void print() {
         System.out.println();
