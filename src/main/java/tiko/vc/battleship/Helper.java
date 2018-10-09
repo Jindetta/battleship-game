@@ -92,7 +92,8 @@ public class Helper {
     /**
      *
      */
-    public static void print() {
+    public static void print(String format, Object... args) {
+        System.out.printf(format, args);
     }
 
     /**
