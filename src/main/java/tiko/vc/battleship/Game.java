@@ -72,6 +72,28 @@ public class Game {
     }
 
     /**
+     *
+     * 
+     * @param coords
+     *
+     * @return
+     */
+    private int coordToIndex(String coords) {
+        try {
+            int letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(coords.charAt(0));
+            int number = Integer.parseInt(coords.substring(1)) - 1;
+ 
+            if (number < 0 || number >= COLUMNS || letter >= ROWS) {
+                throw new IllegalArgumentException();
+            }
+ 
+            return letter * COLUMNS + number;
+        } catch (Exception e) {
+            return INVALID_VALUE;
+        }
+    }
+
+    /**
      * Launches game menu.
      */
     public void launchMenu() {
