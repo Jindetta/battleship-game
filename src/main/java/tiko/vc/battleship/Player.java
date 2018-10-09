@@ -128,6 +128,29 @@ public class Player {
     }
 
     /**
+     * Gets shot details from given index.
+     *
+     * @param index Cell index
+     *
+     * @return value of shot type
+     */
+    protected int getShotInformation(int index) {
+        if (map[index].getShipData().isPresent()) {
+            Optional<Ship> ship = map[index].getShipData();
+ 
+            for (Cell cell : map) {
+                if (!cell.isShot() && cell.getShipData().equals(ship)) {
+                    return ship.get().getId();
+                }
+            }
+
+            return -ship.get().getId();
+        }
+ 
+        return 0;
+    }
+
+    /**
      *
      *
      * @param index
