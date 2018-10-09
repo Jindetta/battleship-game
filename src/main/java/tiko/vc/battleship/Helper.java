@@ -56,6 +56,13 @@ public class Helper {
     public static final String COLUMN_STRING;
 
     /**
+     *
+     */
+    public static String formatString() {
+        return "";
+    }
+
+    /**
      * Define temporary static initializer to compile.
      */
     static {
