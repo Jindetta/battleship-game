@@ -100,6 +100,12 @@ public class Helper {
     }
 
     /**
+     *
+     */
+    public static void print() {
+    }
+    
+    /**
      * Define temporary static initializer to compile.
      */
     static {
