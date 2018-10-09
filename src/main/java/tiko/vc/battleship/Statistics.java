@@ -107,13 +107,13 @@ public class Statistics {
      */
     public void increaseGamesPlayed(boolean win) {
         if (win) {
-            gamesWon++;
+            setGamesWon(getGamesWon() + 1);
         } else {
-            gamesLost++;
+            setGamesLost(getGamesLost() + 1);
         }
 
-        if (gamesWon > 0) {
-            winLossRatio = (double) gamesWon / (gamesLost + gamesWon);
+        if (getGamesWon() > 0) {
+            winLossRatio = (double) getGamesWon() / (getGamesLost() + getGamesWon());
         }
     }
 
