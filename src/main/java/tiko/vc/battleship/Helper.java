@@ -116,7 +116,9 @@ public class Helper {
     }
 
     /**
+     * Creates a column string with correct formatting.
      *
+     * @return newly created column string
      */
     private static String createColumnString() {
         StringBuilder buffer = new StringBuilder();
