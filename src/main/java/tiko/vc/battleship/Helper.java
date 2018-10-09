@@ -138,7 +138,7 @@ public class Helper {
      */
     static {
         TOTAL_PADDING = COLUMN_PADDING * Game.COLUMNS + ROW_PADDING;
-        PLAYER_SPACING  = 0;
+        PLAYER_SPACING  = ROW_PADDING * 2;
         COLUMN_PADDING = Game.COLUMNS > 9 ? 3 : 2;
         ROW_PADDING = 0;
         ROW_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
