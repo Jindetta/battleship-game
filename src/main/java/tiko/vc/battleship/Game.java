@@ -196,7 +196,7 @@ public class Game {
     }
 
     /**
-     *
+     * Generates ships for all players.
      */
     public void generateShips() {
         for (Player player : players) {
