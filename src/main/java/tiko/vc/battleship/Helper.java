@@ -116,10 +116,19 @@ public class Helper {
     }
 
     /**
-     * 
+     *
      */
     private static String createColumnString() {
-        return "";
+        StringBuilder buffer = new StringBuilder();
+        buffer.append(formatString(IS_ROW, "+"));
+
+        for (int i = 1; i <= Game.COLUMNS; i++) {
+            buffer.append(formatString(IS_COLUMN, i));
+        }
+
+        buffer.append(formatString(IS_SPACING, ""));
+
+        return buffer.toString();
     }
 
     /**
