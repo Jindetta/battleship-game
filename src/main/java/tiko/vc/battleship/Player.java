@@ -119,7 +119,7 @@ public class Player {
      */
     private Ship getShipByType(int type) {
         for (Ship ship : vessels) {
-            if (ship.id == type) {
+            if (ship.getId() == type) {
                 return ship;
             }
         }
