@@ -2,6 +2,9 @@ package tiko.vc.battleship;
 
 /**
  * A class containing statistics information.
+ *
+ * @version 2018.0926
+ * @since 1.8
  */
 public class Statistics {
 
@@ -49,7 +52,8 @@ public class Statistics {
      * Override constructor.
      */
     public Statistics() {
-
+        resetShotsFired();
+        resetWinLossRatio();
     }
 
     /**
@@ -61,5 +65,118 @@ public class Statistics {
 
         shotsMissed = 0;
         shotsHit = 0;
+    }
+
+    /**
+     * Resets wins and losses.
+     */
+    public final void resetWinLossRatio() {
+        winLossRatio = 0;
+
+        setGamesLost(0);
+        setGamesWon(0);
+    }
+
+    /**
+     * Increases shots.
+     *
+     * @param hit Hit or miss
+     */
+    public void increaseShotsFired(boolean hit) {
+        if (hit) {
+            shotsHit++;
+            currentStreak++;
+        } else {
+            shotsMissed++;
+            currentStreak = 0;
+        }
+
+        if (shotsHit > 0) {
+            shotAccuracy = (double) shotsHit / (shotsMissed + shotsHit);
+        }
+
+        if (currentStreak > shotStreak) {
+            shotStreak = currentStreak;
+        }
+    }
+
+    /**
+     * Increases games played.
+     *
+     * @param win Win or loss
+     */
+    public void increaseGamesPlayed(boolean win) {
+        if (win) {
+            setGamesWon(getGamesWon() + 1);
+        } else {
+            setGamesLost(getGamesLost() + 1);
+        }
+
+        if (getGamesWon() > 0) {
+            winLossRatio = (double) getGamesWon() / (getGamesLost() + getGamesWon());
+        }
+    }
+
+    /**
+     * Sets games won number.
+     *
+     * @param gamesWon number of games won
+     */
+    public void setGamesWon(int gamesWon) {
+        this.gamesWon = gamesWon;
+    }
+
+    /**
+     * Gets games won number.
+     *
+     * @return gamesWon number of games won
+     */
+    public int getGamesWon() {
+        return this.gamesWon;
+    }
+
+    public void setGamesLost(int gamesLost) {
+        this.gamesLost = gamesLost;
+    }
+
+    /**
+     * Gets games lost number.
+     *
+     * @return gamesLost number of games lost
+     */
+    public int getGamesLost() {
+        return this.gamesLost;
+    }
+
+    /**
+     * Gets shot accuracy.
+     *
+     * @return shot accuracy percentage
+     */
+    public double getShotAccuracy() {
+        return shotAccuracy * 100;
+    }
+
+    /**
+     * Gets win/loss ratio.
+     *
+     * @return win/loss percentage
+     */
+    public double getWinLossRatio() {
+        return winLossRatio * 100;
+    }
+
+    @Override
+    public String toString() {
+        String results = "Games played: " + (getGamesWon() + getGamesLost()) + "\n";
+
+        results += "Win/Loss ratio: " + getWinLossRatio()
+                + "% (W" + getGamesWon() + "/L" + getGamesLost() + ")\n";
+        results += "Shots fired: " + (shotsHit + shotsMissed) + "\n";
+        results += "Shot accuracy: " + getShotAccuracy()
+                + "% (H" + shotsHit + "/M" + shotsMissed + ")\n";
+        results += "Longest streak of continued hits: " + shotStreak;
+
+        return results;
     }
 }
