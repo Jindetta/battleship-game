@@ -100,7 +100,9 @@ public class Helper {
     }
 
     /**
+     * Wraps print function (System).
      *
+     * @param arg Arguments
      */
     public static void print(String arg) {
         System.out.println(arg);
