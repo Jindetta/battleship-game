@@ -58,8 +58,19 @@ public class Helper {
     /**
      *
      */
-    public static String formatString() {
-        return "";
+    public static String formatString(int formatType, Object arg) {
+        switch (formatType) {
+            case IS_TOTAL:
+                return String.format("%-" + TOTAL_PADDING + "s", arg);
+            case IS_SPACING:
+                return String.format("%" + PLAYER_SPACING + "s", arg);
+            case IS_COLUMN:
+                return String.format("%" + COLUMN_PADDING + "s", arg);
+            case IS_ROW:
+                return String.format("%-" + ROW_PADDING + "s", arg);
+        }
+
+        return String.format("%" + formatType + "s", arg);
     }
 
     /**
