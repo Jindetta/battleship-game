@@ -111,6 +111,23 @@ public class Player {
     }
 
     /**
+     * Gets ship type.
+     * 
+     * @param type Ship type
+     * 
+     * @return Ship object if found
+     */
+    private Ship getShipByType(int type) {
+        for (Ship ship : vessels) {
+            if (ship.id == type) {
+                return ship;
+            }
+        }
+ 
+        return null;
+    }
+
+    /**
      *
      *
      * @param index
