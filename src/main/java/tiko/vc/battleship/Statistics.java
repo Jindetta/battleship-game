@@ -139,6 +139,10 @@ public class Statistics {
         this.gamesLost = gamesLost;
     }
 
+    public int getGamesLost() {
+
+    }
+
     /**
      * Gets shot accuracy.
      *
