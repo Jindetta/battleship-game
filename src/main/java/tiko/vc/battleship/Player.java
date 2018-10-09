@@ -61,6 +61,15 @@ public class Player {
     }
 
     /**
+     * Gets AI logic data if available.
+     *
+     * @return index to the next target cell
+     */
+    protected int getShotLogic() {
+        return isAI() ? aiLogic.nextShotIndex() : INVALID_VALUE;
+    }
+
+    /**
      * Gets player AI status.
      *
      * @return True when player is AI.
