@@ -36,6 +36,11 @@ public class Game {
     public static final boolean OVERLAPPING_ALLOWED = false;
 
     /**
+     * Define invalid index constant.
+     */
+    public static final int INVALID_VALUE = -1;
+
+    /**
      * Stores turn index.
      */
     private int turnIndex;
