@@ -142,6 +142,6 @@ public class Helper {
         COLUMN_PADDING = 0;
         ROW_PADDING = 0;
         ROW_STRING = "";
-        COLUMN_STRING = "";
+        COLUMN_STRING = createColumnString();
     }
 }
