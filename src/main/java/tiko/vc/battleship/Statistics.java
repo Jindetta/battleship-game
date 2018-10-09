@@ -139,6 +139,11 @@ public class Statistics {
         this.gamesLost = gamesLost;
     }
 
+    /**
+     * Gets games lost number.
+     *
+     * @return gamesLost number of games lost
+     */
     public int getGamesLost() {
         return this.gamesLost;
     }
