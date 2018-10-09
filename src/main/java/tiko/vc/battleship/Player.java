@@ -212,11 +212,11 @@ public class Player {
     }
 
     /**
+     * Checks if cell is overlapping with anything.
      *
+     * @param index Cell index
      *
-     * @param index
-     *
-     * @return
+     * @return true if overlapping occurs, otherwise false
      */
     private boolean isOverlapping(int index) {
         if (!OVERLAPPING_ALLOWED) {
