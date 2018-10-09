@@ -168,10 +168,10 @@ public class Statistics {
 
     @Override
     public String toString() {
-        String results = "Games played: " + (gamesWon + gamesLost) + "\n";
+        String results = "Games played: " + (getGamesWon() + getGamesLost()) + "\n";
 
         results += "Win/Loss ratio: " + getWinLossRatio()
-                + "% (W" + gamesWon + "/L" + gamesLost + ")\n";
+                + "% (W" + getGamesWon() + "/L" + getGamesLost() + ")\n";
         results += "Shots fired: " + (shotsHit + shotsMissed) + "\n";
         results += "Shot accuracy: " + getShotAccuracy()
                 + "% (H" + shotsHit + "/M" + shotsMissed + ")\n";
