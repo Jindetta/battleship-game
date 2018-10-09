@@ -1,24 +1,62 @@
 package tiko.vc.battleship;
 
+import java.util.Optional;
+
 /**
  * A class containing an individual cell data.
  */
 public class Cell {
 
     /**
-     * Define ship type in this cell. Defaults to none.
+     * Define Ship object in this cell.
      */
-    public int type = 0;
+    private Optional<Ship> shipData;
 
     /**
      * Define if cell was shot. Defaults to false.
      */
-    public boolean shot = false;
+    private boolean shot;
 
     /**
      * Define if cell is visible. Defaults to true.
      */
     private boolean visible = true;
+
+    /**
+     *
+     *
+     * @return
+     */
+    public Optional<Ship> getShipData() {
+        return shipData;
+    }
+
+    /**
+     * Sets ship information.
+     *
+     * @param shipData Ship object.
+     */
+    public void setShipData(Ship shipData) {
+        this.shipData = Optional.ofNullable(shipData);
+    }
+
+    /**
+     *
+     *
+     * @return
+     */
+    public boolean isShot() {
+        return shot;
+    }
+
+    /**
+     *
+     *
+     * @param shot
+     */
+    public void setShot(boolean shot) {
+        this.shot = shot;
+    }
 
     /**
      * Override constructor.
@@ -27,6 +65,9 @@ public class Cell {
      */
     public Cell(boolean visible) {
         this.visible = visible;
+
+        setShipData(null);
+        setShot(false);
     }
 
     /**
@@ -40,7 +81,7 @@ public class Cell {
     public String toString() {
         char value = '-';
 
-        if (type != 0) {
+        if (shipData.isPresent()) {
             if (shot) {
                 value = 'X';
             } else {
@@ -49,7 +90,7 @@ public class Cell {
                 }
 
                 if (Game.DEBUG_MODE) {
-                    value = (char) type;
+                    value = (char) shipData.get().getId();
                 }
             }
         } else if (shot) {

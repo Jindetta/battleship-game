@@ -1,8 +1,12 @@
 package tiko.vc.battleship;
 
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.List;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static tiko.vc.battleship.Game.*;
 
@@ -66,6 +70,17 @@ public class Player {
     }
 
     /**
+     *
+     *
+     * @param index
+     *
+     * @return
+     */
+    private boolean isCellShot(int index) {
+        return map[index % map.length].isShot();
+    }
+
+    /**
      * Checks if given index is within map bounds.
      *
      * @return True when within map bounds.
@@ -83,7 +98,7 @@ public class Player {
      *
      * @return
      */
-    private ArrayList<Integer> getFreeAxis(int index, Directions direction, int length) {
+    private Optional<ArrayList<Integer>> getFreeAxis(int index, Directions direction, int length) {
         ArrayList<Integer> indices = new ArrayList<>();
  
         switch (direction) {
@@ -92,7 +107,7 @@ public class Player {
             case DIRECTION_E:
                 for (int x = index; x < (index + length); x++) {
                     if (hasCollision(x, index, true) || isOverlapping(x)) {
-                        return null;
+                        return Optional.empty();
                     }
  
                     indices.add(x);
@@ -104,7 +119,7 @@ public class Player {
             case DIRECTION_S:
                 for (int x = index; x < (index + (length * COLUMNS)); x += COLUMNS) {
                     if (hasCollision(x, index, false) || isOverlapping(x)) {
-                        return null;
+                        return Optional.empty();
                     }
  
                     indices.add(x);
@@ -113,7 +128,7 @@ public class Player {
                 break;
         }
  
-        return indices;
+        return Optional.of(indices);
     }
 
     /**
@@ -128,7 +143,7 @@ public class Player {
     private boolean hasCollision(int currentIndex, int startIndex, boolean vertical) {
         if (isInRange(currentIndex)) {
             if ((!vertical && currentIndex % COLUMNS == startIndex % COLUMNS) || (vertical && currentIndex / COLUMNS == startIndex / COLUMNS)) {
-                return map[currentIndex].type != 0;
+                return map[currentIndex].getShipData().isPresent();
             }
         }
  
@@ -143,7 +158,35 @@ public class Player {
      * @return
      */
     private boolean isOverlapping(int index) {
+        if (!OVERLAPPING_ALLOWED) {
+            final int[] NEIGHBOUR_CELLS = {
+                index - COLUMNS, index + COLUMNS, index - 1, index + 1
+            };
+
+            AtomicInteger collisionSum = new AtomicInteger(0);
+
+            for (int value : NEIGHBOUR_CELLS) {
+                boolean isVertical = Math.abs(value - index) > 1;
+                boolean notHorizontal = !isVertical && value % COLUMNS != index % COLUMNS;
+                boolean notVertical = isVertical &&value / COLUMNS != index / COLUMNS;
+
+                if (isInRange(value) && (notHorizontal || notVertical)) {
+                    map[value].getShipData().ifPresent(s -> collisionSum.addAndGet(s.getLength()));
+                }
+            }
+
+            return collisionSum.get() > 0;
+        }
+
         return false;
+    }
+
+    /**
+     *
+     */
+    private static <T extends Enum<?>> T randomEnum(Random rng, Class<T> e){
+        int value = rng.nextInt(e.getEnumConstants().length);
+        return e.getEnumConstants()[value];
     }
 
     /**
@@ -156,13 +199,43 @@ public class Player {
      * @return
      */
     protected boolean placeShip(int index, Directions direction, Ship ship) { 
-        List<Integer> indices = getFreeAxis(index, direction, ship.getLength());
+        Optional<ArrayList<Integer>> indices = getFreeAxis(index, direction, ship.getLength());
  
-        if (indices != null) {
-            indices.stream().forEach(i -> map[i].type = ship.getId());
+        indices.ifPresent(list -> list.stream().forEach(i -> map[i].setShipData(ship)));
+        return indices.isPresent();
+    }
+
+    /**
+     *
+     */
+    protected void generateShips() {
+        Random rng = new Random();
+
+        Directions direction;
+        int index;
+
+        for (int i = (vessels.length - 1); i >= 0; i--) {
+            do {
+                index = rng.nextInt(map.length);
+                direction = randomEnum(rng, Directions.class);
+            } while (!placeShip(index, direction, vessels[i]));
+        }
+    }
+
+    /**
+     *
+     *
+     * @param index
+     *
+     * @return
+     */
+    protected boolean shootTo(int index) {
+        if (isInRange(index) && !isCellShot(index)) {
+            map[index % map.length].setShot(true);
+
             return true;
         }
-
+ 
         return false;
     }
 

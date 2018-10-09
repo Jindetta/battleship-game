@@ -3,8 +3,8 @@ package tiko.vc.battleship;
 /**
  * A class containing statistics information.
  *
- * @version 1.0
- * @since 2018.0926
+ * @version 2018.0926
+ * @since 1.8
  */
 public class Statistics {
 
