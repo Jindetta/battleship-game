@@ -81,8 +81,8 @@ public class Helper {
     /**
      *
      */
-    public static String[] renderMap() {
-        return;
+    public static String[] renderMap(Player player) {
+        return player.renderMap(COLUMN_PADDING);
     }
 
     /**
