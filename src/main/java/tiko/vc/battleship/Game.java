@@ -196,6 +196,20 @@ public class Game {
     }
 
     /**
+     *
+     */
+    public void generateShips() {
+        for (Player player : players) {
+            player.resetMap();
+            player.generateShips();
+ 
+            if (!player.isAI()) {
+                //printMap(player);
+            }
+        }
+    }
+
+    /**
      * Overrides default constructor.
      */
     private Game() {
