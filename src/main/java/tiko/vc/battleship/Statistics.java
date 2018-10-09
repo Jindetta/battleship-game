@@ -140,7 +140,7 @@ public class Statistics {
     }
 
     public int getGamesLost() {
-
+        return this.gamesLost;
     }
 
     /**
