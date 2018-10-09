@@ -72,11 +72,11 @@ public class Game {
     }
 
     /**
-     *
+     * Converts coordinate String to cell index.
      * 
-     * @param coords
+     * @param coords String value.
      *
-     * @return
+     * @return Cell index as Integer.
      */
     private int coordToIndex(String coords) {
         try {
