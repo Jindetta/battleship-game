@@ -61,6 +61,18 @@ public class Player {
     }
 
     /**
+     * Delegates shot current information to AI logic.
+     *
+     * @param index Shot index
+     * @param value Shot type (miss, hit etc.)
+     */
+    protected void setShotLogic(int index, int value) {
+        if (isAI()) {
+            aiLogic.setShotData(index, value);
+        }
+    }
+
+    /**
      * Gets AI logic data if available.
      *
      * @return index to the next target cell
