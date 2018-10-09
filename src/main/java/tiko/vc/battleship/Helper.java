@@ -141,7 +141,7 @@ public class Helper {
         PLAYER_SPACING  = 0;
         COLUMN_PADDING = 0;
         ROW_PADDING = 0;
-        ROW_STRING = "";
+        ROW_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         COLUMN_STRING = createColumnString();
     }
 }
