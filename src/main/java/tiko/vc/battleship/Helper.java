@@ -102,9 +102,10 @@ public class Helper {
     /**
      *
      */
-    public static void print() {
+    public static void print(String arg) {
+        System.out.println(arg);
     }
-    
+
     /**
      * Define temporary static initializer to compile.
      */
