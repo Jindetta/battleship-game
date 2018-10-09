@@ -137,7 +137,7 @@ public class Helper {
      * Define temporary static initializer to compile.
      */
     static {
-        TOTAL_PADDING = 0;
+        TOTAL_PADDING = COLUMN_PADDING * Game.COLUMNS + ROW_PADDING;
         PLAYER_SPACING  = 0;
         COLUMN_PADDING = 0;
         ROW_PADDING = 0;
