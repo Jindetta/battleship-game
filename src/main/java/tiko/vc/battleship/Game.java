@@ -218,6 +218,15 @@ public class Game {
     }
 
     /**
+     *
+     * 
+     * @return
+     */
+    private boolean placeShips() {
+        return false;
+    }
+
+    /**
      * Generates ships for all players.
      */
     public void generateShips() {
