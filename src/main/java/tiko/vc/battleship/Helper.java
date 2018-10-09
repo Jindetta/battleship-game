@@ -79,6 +79,13 @@ public class Helper {
     }
 
     /**
+     *
+     */
+    public static String[] renderMap() {
+        return;
+    }
+
+    /**
      * Define temporary static initializer to compile.
      */
     static {
