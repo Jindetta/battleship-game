@@ -352,8 +352,9 @@ public class Player {
     }
 
     /**
+     * Gets ai targeting logic.
      *
-     * @return
+     * @return Ai targeting logic.
      */
     public TargetingLogic getAiLogic() {
         return aiLogic;
