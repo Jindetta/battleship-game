@@ -294,7 +294,7 @@ public class TargetingLogic {
          * @return
          */
         public int getShotValue() {
-            return;
+            return shotValue;
         }
     }
 }
