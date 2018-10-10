@@ -166,6 +166,24 @@ public class Statistics {
         return winLossRatio * 100;
     }
 
+    /**
+     * Gets current streak.
+     *
+     * @return Current streak value.
+     */
+    public int getCurrentStreak() {
+        return currentStreak;
+    }
+
+    /**
+     * Gets shots hit amount.
+     *
+     * @return Shots hit value.
+     */
+    public int getShotsHit() {
+        return shotsHit;
+    }
+
     @Override
     public String toString() {
         String results = "Games played: " + (getGamesWon() + getGamesLost()) + "\n";
