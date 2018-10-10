@@ -30,7 +30,7 @@ public class Game {
     /**
      * Defines debug mode status.
      */
-    public static final boolean DEBUG_MODE = true;
+    public static final boolean DEBUG_MODE = false;
 
     /**
      * Defines if overlapping is allowed.
