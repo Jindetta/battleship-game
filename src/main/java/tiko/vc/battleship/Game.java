@@ -101,7 +101,7 @@ public class Game {
      */
     private int coordToIndex(String coords) {
         try {
-            int letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(coords.charAt(0));
+            int letter = ROW_STRING.indexOf(coords.charAt(0));
             int number = Integer.parseInt(coords.substring(1)) - 1;
  
             if (number < 0 || number >= COLUMNS || letter >= ROWS) {
