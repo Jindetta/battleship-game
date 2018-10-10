@@ -26,7 +26,8 @@ public class GameButton extends JButton {
 	 * for checking if the button is players or bots.
 	 */
 	private BoardPanel board;
-	
+
+
 	/**
 	 * 
 	 */
@@ -50,6 +51,12 @@ public class GameButton extends JButton {
 	}
 	public void setyPosInBoard(int yPosInBoard) {
 		this.yPosInBoard = yPosInBoard;
+	}
+	public BoardPanel getBoard() {
+		return board;
+	}
+	public void setBoard(BoardPanel board) {
+		this.board = board;
 	}
 
 }
