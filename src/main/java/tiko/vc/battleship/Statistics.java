@@ -185,8 +185,9 @@ public class Statistics {
     }
 
     /**
+     * Gets amount of missed shots.
      *
-     * @return
+     * @return Shots missed value.
      */
     public int getShotsMissed() {
         return shotsMissed;
