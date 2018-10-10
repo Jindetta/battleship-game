@@ -342,7 +342,11 @@ public class Player {
         return map;
     }
 
+    /**
+     * 
+     * @return
+     */
     public Ship[] getVessels() {
-        return;
+        return vessels;
     }
 }
