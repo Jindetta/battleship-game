@@ -8,8 +8,10 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-
-
+/**
+ * This class is a gameboard of the game. This will
+ * be used twice to create a board for the player and the bot.
+ */
 public class BoardPanel extends JPanel {
 	
 	/**
