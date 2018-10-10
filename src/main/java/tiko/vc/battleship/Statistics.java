@@ -184,6 +184,14 @@ public class Statistics {
         return shotsHit;
     }
 
+    /**
+     * 
+     * @return
+     */
+    public int getShotsMissed() {
+        return;
+    }
+
     @Override
     public String toString() {
         String results = "Games played: " + (getGamesWon() + getGamesLost()) + "\n";
