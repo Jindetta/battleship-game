@@ -267,7 +267,7 @@ public class Player {
     }
 
     /**
-     *
+     * Generates ships for this player.
      */
     protected void generateShips() {
         Random rng = new Random();
