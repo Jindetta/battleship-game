@@ -3,7 +3,7 @@ package tiko.vc;
 import tiko.vc.battleship.Game;
 
 /**
- * 
+ * A CLass that starts the program.
  */
 public class Run {
 
