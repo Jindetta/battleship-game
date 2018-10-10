@@ -421,7 +421,7 @@ public class Player {
         return aiLogic;
     }
 
-    @Overrides
+    @Override
     public String toString() {
         return getName();
     }
