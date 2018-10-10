@@ -79,6 +79,20 @@ public class Game {
     }
 
     /**
+     *
+     *
+     * @param targetingData
+     * @return
+     */
+    private int processMove(String targetingData) {
+        if (targetingData != null && targetingData.length() >= 2) {
+            return coordToIndex(targetingData);
+        }
+ 
+        return INVALID_VALUE;
+    }
+
+    /**
      * Converts coordinate String to cell index.
      * 
      * @param coords String value.
@@ -135,7 +149,7 @@ public class Game {
                     case "3":
                         cp.println("Sorry, not implemented!", Attribute.NONE, FColor.BLUE, BColor.NONE);
                         if (initialSetupCompleted) {
-                            
+
                         }
                         break;
                     case "4":
