@@ -166,6 +166,14 @@ public class Statistics {
         return winLossRatio * 100;
     }
 
+    /**
+     * 
+     * @return
+     */
+    public int getCurrentStreak() {
+        return;
+    }
+
     @Override
     public String toString() {
         String results = "Games played: " + (getGamesWon() + getGamesLost()) + "\n";
