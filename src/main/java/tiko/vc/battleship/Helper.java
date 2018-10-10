@@ -55,6 +55,14 @@ public class Helper {
      */
     public static final String COLUMN_STRING;
 
+    /**
+     * Formats a string with custom spacing.
+     *
+     * @param formatType Format type
+     * @param arg Argument value
+     *
+     * @return formatted string
+     */
     public static String formatString(int formatType, Object arg) {
         switch (formatType) {
             case IS_TOTAL:
