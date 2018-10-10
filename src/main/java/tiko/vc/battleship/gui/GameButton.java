@@ -1,5 +1,7 @@
 package tiko.vc.battleship.gui;
 
+import java.awt.event.ActionEvent;
+
 import javax.swing.JButton;
 
 /**
@@ -27,7 +29,6 @@ public class GameButton extends JButton {
 	 */
 	private BoardPanel board;
 
-
 	/**
 	 * 
 	 */
@@ -38,6 +39,9 @@ public class GameButton extends JButton {
 		setyPosInBoard(yPosInBoard);
 	}
 	
+	private void buttonPressed(ActionEvent e) {
+		
+	}	
 	
 	/* GETTERU & SETTERU */
 	
