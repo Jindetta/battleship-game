@@ -316,7 +316,7 @@ public class Game {
             player.generateShips();
  
             if (!player.isAI()) {
-                //printMap(player);
+                printMap(player);
             }
         }
     }
