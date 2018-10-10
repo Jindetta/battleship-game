@@ -38,8 +38,8 @@ public class GUI extends JFrame {
 		setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
 		
-		playerBoard = new BoardPanel(Color.BLACK);
-		botBoard = new BoardPanel(Color.cyan);
+		playerBoard = new BoardPanel(Color.BLACK, BoardPanel.BoardType.PLAYER);
+		botBoard = new BoardPanel(Color.cyan, BoardPanel.BoardType.BOT);
 		
 		startGame = new JButton("Start game");
 		generateShips = new JButton("Generate ships");

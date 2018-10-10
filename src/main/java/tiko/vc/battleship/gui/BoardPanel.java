@@ -23,8 +23,10 @@ public class BoardPanel extends JPanel {
 	/**
 	 * 
 	 */
-	public BoardPanel(Color color) {
+	public BoardPanel(Color color, BoardType boardType) {
 		super(new GridLayout(11, 11));
+		
+		this.boardType = boardType;
 		
 		setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		setOpaque(true);
