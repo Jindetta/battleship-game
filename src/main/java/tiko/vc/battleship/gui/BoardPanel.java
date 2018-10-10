@@ -14,6 +14,8 @@ public class BoardPanel extends JPanel {
 	
 	public static final int BOARD_SIZE = GUI.FRAME_WIDTH / 2 - 60;
 	
+	private JButton[][] boardButtons;
+	
 	/**
 	 * 
 	 */
@@ -25,6 +27,7 @@ public class BoardPanel extends JPanel {
 		
 		setBackground(color);
 		setPreferredSize(new Dimension(BOARD_SIZE, BOARD_SIZE));
+		
 	}
 	
 }
