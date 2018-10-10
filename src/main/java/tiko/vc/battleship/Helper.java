@@ -83,8 +83,9 @@ public class Helper {
     }
 
     /**
+     * Gets row padding amount.
      *
-     * @return
+     * @return Row padding value.
      */
     public static int getRowPadding() {
         return ROW_PADDING;
