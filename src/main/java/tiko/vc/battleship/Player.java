@@ -128,6 +128,19 @@ public class Player {
     }
 
     /**
+     *
+     *
+     * @param type
+     *
+     * @return
+     */
+    protected String getShipName(int type) {
+        Ship ship = getShipByType(Math.abs(type));
+
+        return ship != null ? ship.toString() : "";
+    }
+
+    /**
      * Gets shot details from given index.
      *
      * @param index Cell index
