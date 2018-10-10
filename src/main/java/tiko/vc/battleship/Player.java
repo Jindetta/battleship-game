@@ -332,4 +332,12 @@ public class Player {
 
         resetMap();
     }
+
+    /**
+     *
+     * @return
+     */
+    public Cell[] getMap() {
+        return;
+    }
 }
