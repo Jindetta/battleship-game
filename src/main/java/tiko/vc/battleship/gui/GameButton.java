@@ -22,9 +22,15 @@ public class GameButton extends JButton {
 	private int yPosInBoard;
 	
 	/**
+	 * Tells that to what board this button belongs. Used mostly
+	 * for checking if the button is players or bots.
+	 */
+	private BoardPanel board;
+	
+	/**
 	 * 
 	 */
-	public GameButton(String btnText, int xPosInBoard, int yPosInBoard) {
+	public GameButton(BoardPanel board, String btnText, int xPosInBoard, int yPosInBoard) {
 		super(btnText);
 		setxPosInBoard(xPosInBoard);
 		setyPosInBoard(yPosInBoard);
