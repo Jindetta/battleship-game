@@ -14,21 +14,53 @@ import javax.swing.JFrame;
  */
 public class GUI extends JFrame {
 	
+	/**
+	 * Sets the title of the window.
+	 */
 	private final static String WINDOW_TITLE = "Battleship";
 	
+	/**
+	 * Width of the window.
+	 */
 	public final static int FRAME_WIDTH = 1100;
+	
+	/**
+	 * Height of the window.
+	 */
 	public final static int FRAME_HEIGHT = 600;
 	
+	/**
+	 * Players board that is made from JPanel.
+	 */
 	private BoardPanel playerBoard;
+	
+	/**
+	 * Bots board that is made from JPanel.
+	 */
 	private BoardPanel botBoard;
 	
+	/**
+	 * JButton that starts the game.
+	 */
 	private JButton startGame;
+	
+	/**
+	 * JButton that generates ships randomly for the player.
+	 */
 	private JButton generateShips;
+	
+	/**
+	 * JButton that allows the player to manually place the ships.
+	 */
 	private JButton placeShips;
+	
+	/**
+	 * Jbutton that exits the game.
+	 */
 	private JButton exitGame;
 	
 	/**
-	 * TODO
+	 *
 	 */
 	public GUI() {
 		super(WINDOW_TITLE);
@@ -77,6 +109,12 @@ public class GUI extends JFrame {
 		setVisible(true);
 	}
 	
+	/**
+	 * Called when exit button is pressed.
+	 * Exits the program.
+	 * 
+	 * @param e
+	 */
 	private void exitGamePressed(ActionEvent e) {
 		System.exit(0);	
 	}
