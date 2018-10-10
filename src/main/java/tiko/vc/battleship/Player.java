@@ -356,6 +356,6 @@ public class Player {
      * @return
      */
     public TargetingLogic getAiLogic() {
-        return ;
+        return aiLogic;
     }
 }
