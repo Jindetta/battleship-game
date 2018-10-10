@@ -341,4 +341,8 @@ public class Player {
     public Cell[] getMap() {
         return map;
     }
+
+    public Ship[] getVessels() {
+        return;
+    }
 }
