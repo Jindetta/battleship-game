@@ -56,11 +56,11 @@ public class Helper {
     public static final String COLUMN_STRING;
 
     /**
-     *
+     * 
      * @return
      */
     public static int getTotalPadding() {
-        return;
+        return TOTAL_PADDING;
     }
 
     /**
