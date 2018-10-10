@@ -56,6 +56,60 @@ public class Helper {
     public static final String COLUMN_STRING;
 
     /**
+     * Formats a string with custom spacing.
+     *
+     * @param formatType Format type
+     * @param arg Argument value
+     *
+     * @return formatted string
+     */
+    public static String formatString(int formatType, Object arg) {
+        switch (formatType) {
+            case IS_TOTAL:
+                return String.format("%-" + TOTAL_PADDING + "s", arg);
+            case IS_SPACING:
+                return String.format("%" + PLAYER_SPACING + "s", arg);
+            case IS_COLUMN:
+                return String.format("%" + COLUMN_PADDING + "s", arg);
+            case IS_ROW:
+                return String.format("%-" + ROW_PADDING + "s", arg);
+        }
+
+        return String.format("%" + formatType + "s", arg);
+    }
+
+
+    /**
+     * Renders player map.
+     *
+     * @param player Player object
+     *
+     * @return string array with rendered output
+     */
+    public static String[] renderMap(Player player) {
+        return player.renderMap(COLUMN_PADDING);
+    }
+
+    /**
+     * Prints with formatting.
+     *
+     * @param format Format string
+     * @param args Arguments to pass
+     */
+    public static void print(String format, Object... args) {
+        System.out.printf(format, args);
+    }
+
+    /**
+     * Wraps print function (System).
+     *
+     * @param arg Arguments
+     */
+    public static void print(String arg) {
+        System.out.println(arg);
+    }
+
+    /**
      * Define temporary static initializer to compile.
      */
     static {
