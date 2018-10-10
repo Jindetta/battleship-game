@@ -117,8 +117,15 @@ public class GUI extends JFrame {
 		setVisible(true);
 	}
 	
-	public void addShipToBoard(Ship ship, int x, int y, int direction) {
-		
+	/**
+	 * 
+	 * @param ship
+	 * @param x
+	 * @param y
+	 * @param direction
+	 */
+	public void addShipToBoard(BoardPanel board, Ship ship, int x, int y, int direction) {
+
 	}
 	
 	/**
