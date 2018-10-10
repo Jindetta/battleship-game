@@ -12,15 +12,15 @@ import javax.swing.JPanel;
 
 public class BoardPanel extends JPanel {
 	
-	public static final int BOARD_SIZE = GUI.FRAME_WIDTH / 2 - 60;
+	public static final int BOARD_SIZE = GUI.FRAME_WIDTH / 2 - 30;
 	
-	private JButton[][] boardButtons;
+	private GameButton[][] boardButtons;
 	
 	/**
 	 * 
 	 */
 	public BoardPanel(Color color) {
-		super(new GridLayout(10, 10));
+		super(new GridLayout(11, 11));
 		
 		setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		setOpaque(true);
@@ -28,6 +28,14 @@ public class BoardPanel extends JPanel {
 		setBackground(color);
 		setPreferredSize(new Dimension(BOARD_SIZE, BOARD_SIZE));
 		
+		boardButtons = new GameButton[11][11];
+		
+		for(int rows = 0; rows < boardButtons.length; rows++) {
+			for(int cols = 0; cols < boardButtons[rows].length; cols++) {
+				boardButtons[rows][cols] = new GameButton("X");
+				add(boardButtons[rows][cols]);
+			}
+		}
 	}
 	
 }
