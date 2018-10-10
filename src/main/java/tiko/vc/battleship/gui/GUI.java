@@ -75,8 +75,14 @@ public class GUI extends JFrame {
 		botBoard = new BoardPanel(Color.cyan, BoardPanel.BoardType.BOT);
 		
 		startGame = new JButton("Start game");
+		startGame.addActionListener(this::startGamePressed);
+		
 		generateShips = new JButton("Generate ships");
+		generateShips.addActionListener(this::generateShipsPressed);
+		
 		placeShips = new JButton("Place ships");
+		placeShips.addActionListener(this::placeShipsPressed);
+		
 		exitGame = new JButton("Exit game");
 		exitGame.addActionListener(this::exitGamePressed);
 
