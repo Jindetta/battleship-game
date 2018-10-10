@@ -128,6 +128,19 @@ public class Player {
     }
 
     /**
+     *
+     *
+     * @param type
+     *
+     * @return
+     */
+    protected String getShipName(int type) {
+        Ship ship = getShipByType(Math.abs(type));
+
+        return ship != null ? ship.toString() : "";
+    }
+
+    /**
      * Gets shot details from given index.
      *
      * @param index Cell index
@@ -306,6 +319,54 @@ public class Player {
     }
 
     /**
+     *
+     *
+     * @return
+     */
+    protected boolean shipsDestroyed() {
+        for (Cell ship : map) {
+            if (ship.getShipData().isPresent() && !ship.isShot()) {
+                return false;
+            }
+        }
+ 
+        return true;
+    }
+
+    /**
+     *
+     */
+    protected void setCellsVisible() {
+        for (Cell cell : map) {
+            cell.setVisible();
+        }
+    }
+
+    /**
+     *
+     *
+     * @param padding
+     * @return
+     */
+    protected String[] renderMap(int padding) {
+        String[] output = new String[ROWS];
+        final String PADDING_FORMAT = "%" + padding + "s";
+ 
+        for (int r = 0; r < ROWS; r++) {
+            StringBuilder buffer = new StringBuilder();
+ 
+            for (int c = 0; c < COLUMNS; c++) {
+                int index = r * COLUMNS + c;
+                buffer.append(String.format(PADDING_FORMAT, map[index]));
+            }
+ 
+            output[r] = buffer.toString();
+        }
+ 
+        return output;
+    }
+
+    /**
      * Resets map data.
      */
     protected final void resetMap() {
@@ -358,5 +419,10 @@ public class Player {
      */
     public TargetingLogic getAiLogic() {
         return aiLogic;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
     }
 }
