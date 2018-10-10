@@ -281,11 +281,11 @@ public class TargetingLogic {
         }
 
         /**
-         * 
+         *
          * @return
          */
         public int getShotOrigin() {
-            return;
+            return shotOrigin;
         }
     }
 }
