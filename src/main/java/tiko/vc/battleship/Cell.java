@@ -50,9 +50,9 @@ public class Cell {
     }
 
     /**
+     * Sets cell state as shot.
      *
-     *
-     * @param shot
+     * @param shot Cell shot state.
      */
     public void setShot(boolean shot) {
         this.shot = shot;
