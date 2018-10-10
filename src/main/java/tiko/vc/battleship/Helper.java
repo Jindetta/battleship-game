@@ -100,6 +100,11 @@ public class Helper {
         System.out.printf(format, args);
     }
 
+
+    public static void print(String arg) {
+
+    }
+
     /**
      * Define temporary static initializer to compile.
      */
