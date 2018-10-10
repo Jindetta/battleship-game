@@ -116,6 +116,11 @@ public class Helper {
         System.out.println();
     }
 
+    /**
+     * Creates a column string with correct formatting.
+     *
+     * @return newly created column string
+     */
     private static String createColumnString() {
         StringBuilder buffer = new StringBuilder();
         buffer.append(formatString(IS_ROW, "+"));
