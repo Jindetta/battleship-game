@@ -223,9 +223,9 @@ public class Game {
     }
 
     /**
-     *
+     * Places ships manually.
      * 
-     * @return
+     * @return true if ships were successfully placed, otherwise false
      */
     private boolean placeShips() {
         return false;
