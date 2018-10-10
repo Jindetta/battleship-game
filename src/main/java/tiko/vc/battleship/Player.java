@@ -350,4 +350,12 @@ public class Player {
     public Ship[] getVessels() {
         return vessels;
     }
+
+    /**
+     *
+     * @return
+     */
+    public TargetingLogic getAiLogic() {
+        return ;
+    }
 }
