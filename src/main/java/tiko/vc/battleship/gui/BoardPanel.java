@@ -14,6 +14,8 @@ public class BoardPanel extends JPanel {
 	
 	public static final int BOARD_SIZE = GUI.FRAME_WIDTH / 2 - 30;
 	
+	public static enum BoardType {PLAYER, BOT};
+	
 	private GameButton[][] boardButtons;
 	
 	/**
