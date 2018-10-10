@@ -245,15 +245,19 @@ public class Game {
                 switch (getUserInput()) {
                     case "1":
                         generateShips();
+                        cp.println("Ships were placed randomly.", Attribute.NONE, FColor.BLUE, BColor.NONE);
                         initialSetupCompleted = true;
                         break;
                     case "2":
                         cp.println("Sorry, not implemented!", Attribute.NONE, FColor.BLUE, BColor.NONE);
                         break;
                     case "3":
-                        cp.println("Sorry, not implemented!", Attribute.NONE, FColor.BLUE, BColor.NONE);
                         if (initialSetupCompleted) {
-
+                            Player winner = playRound();
+                            cp.println(winner.toString() + " won the game!", Attribute.BOLD, FColor.GREEN, BColor.NONE);
+                            initialSetupCompleted = false;
+                        } else {
+                            throw new Exception("You need to generate ships first.");
                         }
                         break;
                     case "4":
