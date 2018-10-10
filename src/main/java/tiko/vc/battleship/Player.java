@@ -284,11 +284,11 @@ public class Player {
     }
 
     /**
+     * Shoots to specified index.
      *
+     * @param index Cell index
      *
-     * @param index
-     *
-     * @return
+     * @return true if shot was successful, otherwise false
      */
     protected boolean shootTo(int index) {
         if (isInRange(index) && !isCellShot(index)) {
