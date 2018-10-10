@@ -17,7 +17,7 @@ public enum Directions {
      */
     DIRECTION_W,
     /**
-     *
+     * South direction
      */
     DIRECTION_S
 }
