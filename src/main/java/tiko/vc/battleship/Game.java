@@ -5,6 +5,8 @@ import java.util.Scanner;
 import com.diogonunes.jcdp.color.ColoredPrinter;
 import com.diogonunes.jcdp.color.api.Ansi.*;
 
+import static tiko.vc.battleship.Helper.*;
+
 /**
  * A class that creates the game and combines all needed classes.
  */
