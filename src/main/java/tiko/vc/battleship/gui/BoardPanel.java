@@ -12,9 +12,11 @@ import javax.swing.JPanel;
 
 public class BoardPanel extends JPanel {
 	
-	public static final int BOARD_SIZE = GUI.FRAME_WIDTH / 2 - 30;
+	public static final int BOARD_SIZE = GUI.FRAME_WIDTH / 2 - 10;
 	
 	public static enum BoardType {PLAYER, BOT};
+	
+	private static final String COLUMN_NAMES = "ABCDEFGHIJ";
 	
 	private GameButton[][] boardButtons;
 	
@@ -38,7 +40,13 @@ public class BoardPanel extends JPanel {
 		
 		for(int rows = 0; rows < boardButtons.length; rows++) {
 			for(int cols = 0; cols < boardButtons[rows].length; cols++) {
-				boardButtons[rows][cols] = new GameButton('X');
+				String btnText = "";
+				if(rows == 0 && cols > 0)
+					btnText = String.valueOf(COLUMN_NAMES.charAt(cols-1));
+				else if(cols == 0 && rows > 0)
+					btnText = Integer.toString(rows);
+				
+				boardButtons[rows][cols] = new GameButton(btnText, rows, cols);
 				add(boardButtons[rows][cols]);
 			}
 		}
