@@ -281,8 +281,9 @@ public class TargetingLogic {
         }
 
         /**
+         * Gets shots origin.
          *
-         * @return
+         * @return Shots origin.
          */
         public int getShotOrigin() {
             return shotOrigin;
