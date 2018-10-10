@@ -175,6 +175,14 @@ public class Statistics {
         return currentStreak;
     }
 
+    /**
+     * 
+     * @return
+     */
+    public int getShotsHit() {
+        return;
+    }
+
     @Override
     public String toString() {
         String results = "Games played: " + (getGamesWon() + getGamesLost()) + "\n";
