@@ -6,7 +6,7 @@ import com.diogonunes.jcdp.color.ColoredPrinter;
 import com.diogonunes.jcdp.color.api.Ansi.*;
 
 /**
- * 
+ * A class that creates the game and combines all needed classes.
  */
 public class Game {
 
@@ -34,6 +34,11 @@ public class Game {
      * Defines if overlapping is allowed.
      */
     public static final boolean OVERLAPPING_ALLOWED = false;
+
+    /**
+     * Define invalid index constant.
+     */
+    public static final int INVALID_VALUE = -1;
 
     /**
      * Stores turn index.
@@ -69,6 +74,28 @@ public class Game {
     private String getUserInput() {
         String output = scanner.nextLine();
         return output.trim().toUpperCase();
+    }
+
+    /**
+     * Converts coordinate String to cell index.
+     * 
+     * @param coords String value.
+     *
+     * @return Cell index as Integer.
+     */
+    private int coordToIndex(String coords) {
+        try {
+            int letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(coords.charAt(0));
+            int number = Integer.parseInt(coords.substring(1)) - 1;
+ 
+            if (number < 0 || number >= COLUMNS || letter >= ROWS) {
+                throw new IllegalArgumentException();
+            }
+ 
+            return letter * COLUMNS + number;
+        } catch (Exception e) {
+            return INVALID_VALUE;
+        }
     }
 
     /**
@@ -193,6 +220,29 @@ public class Game {
      */
     private void setRandomPlayerTurn() {
         turnIndex = (int) (Math.random() * players.length);
+    }
+
+    /**
+     *
+     * 
+     * @return
+     */
+    private boolean placeShips() {
+        return false;
+    }
+
+    /**
+     * Generates ships for all players.
+     */
+    public void generateShips() {
+        for (Player player : players) {
+            player.resetMap();
+            player.generateShips();
+ 
+            if (!player.isAI()) {
+                //printMap(player);
+            }
+        }
     }
 
     /**
