@@ -167,11 +167,11 @@ public class Statistics {
     }
 
     /**
-     * 
+     *
      * @return
      */
     public int getCurrentStreak() {
-        return;
+        return currentStreak;
     }
 
     @Override
