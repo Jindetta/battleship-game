@@ -90,6 +90,12 @@ public class Helper {
         return player.renderMap(COLUMN_PADDING);
     }
 
+    /**
+     * Prints with formatting.
+     *
+     * @param format Format string
+     * @param args Arguments to pass
+     */
     public static void print(String format, Object... args) {
         System.out.printf(format, args);
     }
