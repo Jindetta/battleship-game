@@ -193,13 +193,13 @@ public class Player {
     }
 
     /**
+     * Checks if there is a collision in given cell.
      *
+     * @param currentIndex Current index
+     * @param startIndex Starting index
+     * @param vertical Check vertically or horizontally
      *
-     * @param currentIndex
-     * @param startIndex
-     * @param vertical
-     *
-     * @return
+     * @return true if collision is detected, otherwise false
      */
     private boolean hasCollision(int currentIndex, int startIndex, boolean vertical) {
         if (isInRange(currentIndex)) {
