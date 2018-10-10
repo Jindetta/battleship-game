@@ -321,6 +321,21 @@ public class Player {
     /**
      *
      *
+     * @return
+     */
+    protected boolean shipsDestroyed() {
+        for (Cell ship : map) {
+            if (ship.getShipData().isPresent() && !ship.isShot()) {
+                return false;
+            }
+        }
+ 
+        return true;
+    }
+
+    /**
+     *
+     *
      * @param padding
      * @return
      */
