@@ -78,8 +78,9 @@ public class Cell {
     }
 
     /**
+     * Gets cell visible state.
      *
-     * @return
+     * @return Cell visible state.
      */
     public boolean isVisible() {
         return visible;
