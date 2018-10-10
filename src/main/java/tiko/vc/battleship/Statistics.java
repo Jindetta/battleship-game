@@ -176,11 +176,11 @@ public class Statistics {
     }
 
     /**
-     * 
+     *
      * @return
      */
     public int getShotsHit() {
-        return;
+        return shotsHit;
     }
 
     @Override
