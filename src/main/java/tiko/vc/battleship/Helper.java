@@ -90,6 +90,10 @@ public class Helper {
         return player.renderMap(COLUMN_PADDING);
     }
 
+    public static void print(String format, Object... args) {
+
+    }
+
     /**
      * Define temporary static initializer to compile.
      */
