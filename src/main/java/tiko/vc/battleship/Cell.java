@@ -41,9 +41,9 @@ public class Cell {
     }
 
     /**
+     * Gets cell shot state.
      *
-     *
-     * @return
+     * @return Cell shot state.
      */
     public boolean isShot() {
         return shot;
