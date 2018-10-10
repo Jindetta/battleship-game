@@ -279,5 +279,23 @@ public class TargetingLogic {
         private boolean hasLogic() {
             return logicData[currentLogic] != INVALID_VALUE;
         }
+
+        /**
+         * Gets shots origin.
+         *
+         * @return Shots origin.
+         */
+        public int getShotOrigin() {
+            return shotOrigin;
+        }
+
+        /**
+         * Gets shot value.
+         *
+         * @return Shot value.
+         */
+        public int getShotValue() {
+            return shotValue;
+        }
     }
 }
