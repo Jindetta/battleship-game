@@ -83,11 +83,11 @@ public class Helper {
     }
 
     /**
-     * 
+     *
      * @return
      */
     public static int getRowPadding() {
-        return;
+        return ROW_PADDING;
     }
 
     /**
