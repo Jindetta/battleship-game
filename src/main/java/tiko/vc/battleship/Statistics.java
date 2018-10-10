@@ -194,8 +194,9 @@ public class Statistics {
     }
 
     /**
+     * Gets shot streak.
      *
-     * @return
+     * @return Shot streak value.
      */
     public int getShotStreak() {
         return shotStreak;
