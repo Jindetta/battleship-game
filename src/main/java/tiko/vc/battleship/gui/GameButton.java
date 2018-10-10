@@ -1,5 +1,7 @@
 package tiko.vc.battleship.gui;
 
+import java.awt.event.ActionEvent;
+
 import javax.swing.JButton;
 
 /**
@@ -22,14 +24,33 @@ public class GameButton extends JButton {
 	private int yPosInBoard;
 	
 	/**
+	 * Tells that to what board this button belongs. Used mostly
+	 * for checking if the button is players or bots.
+	 */
+	private BoardPanel board;
+
+	/**
 	 * 
 	 */
-	public GameButton(String btnText, int xPosInBoard, int yPosInBoard) {
+	public GameButton(BoardPanel board, String btnText, int xPosInBoard, int yPosInBoard) {
 		super(btnText);
+		setBoard(board);
 		setxPosInBoard(xPosInBoard);
 		setyPosInBoard(yPosInBoard);
+		
+		if(getBoard().getBoardType() == BoardPanel.BoardType.PLAYER &&
+				(getxPosInBoard() > 0 && getyPosInBoard() > 0))
+			addActionListener(this::buttonPressed);
 	}
 	
+	/**
+	 * Called when this button is pressed.
+	 * 
+	 * @param e
+	 */
+	private void buttonPressed(ActionEvent e) {
+		System.out.println("Hey");
+	}	
 	
 	/* GETTERU & SETTERU */
 	
@@ -44,6 +65,12 @@ public class GameButton extends JButton {
 	}
 	public void setyPosInBoard(int yPosInBoard) {
 		this.yPosInBoard = yPosInBoard;
+	}
+	public BoardPanel getBoard() {
+		return board;
+	}
+	public void setBoard(BoardPanel board) {
+		this.board = board;
 	}
 
 }

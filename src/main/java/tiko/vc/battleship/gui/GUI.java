@@ -8,6 +8,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+import tiko.vc.battleship.Ship;
+
 /**
  * Class that constructs the graphical user interface
  * for the battleship game.
@@ -75,8 +77,14 @@ public class GUI extends JFrame {
 		botBoard = new BoardPanel(Color.cyan, BoardPanel.BoardType.BOT);
 		
 		startGame = new JButton("Start game");
+		startGame.addActionListener(this::startGamePressed);
+		
 		generateShips = new JButton("Generate ships");
+		generateShips.addActionListener(this::generateShipsPressed);
+		
 		placeShips = new JButton("Place ships");
+		placeShips.addActionListener(this::placeShipsPressed);
+		
 		exitGame = new JButton("Exit game");
 		exitGame.addActionListener(this::exitGamePressed);
 
@@ -107,6 +115,43 @@ public class GUI extends JFrame {
 		add(exitGame, c);	
 		
 		setVisible(true);
+	}
+	
+	/**
+	 * 
+	 * @param ship
+	 * @param x
+	 * @param y
+	 * @param direction
+	 */
+	public void addShipToBoard(BoardPanel board, Ship ship, int x, int y, int direction) {
+
+	}
+	
+	/**
+	 * Called when start game button is pressed.
+	 * @param e
+	 */
+	private void startGamePressed(ActionEvent e) {
+		//TODO
+	}
+	
+	/**
+	 * Called when generate ships button is pressed.
+	 * 
+	 * @param e
+	 */
+	private void generateShipsPressed(ActionEvent e) {
+		//TODO
+	}
+	
+	/**
+	 * Called when place ships button is pressed.
+	 * 
+	 * @param e
+	 */
+	private void placeShipsPressed(ActionEvent e) {
+		//TODO
 	}
 	
 	/**
