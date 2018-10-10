@@ -243,7 +243,12 @@ public class Player {
     }
 
     /**
+     * Gets random enum value.
      *
+     * @param rng random number
+     * @param e Directions class
+     *
+     * @return random enum value
      */
     private static <T extends Enum<?>> T randomEnum(Random rng, Class<T> e){
         int value = rng.nextInt(e.getEnumConstants().length);
