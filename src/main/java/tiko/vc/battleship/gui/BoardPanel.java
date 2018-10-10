@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 public class BoardPanel extends JPanel {
 	
 	public static final int BOARD_SIZE = GUI.FRAME_WIDTH / 2 - 10;
-	
+
 	public static enum BoardType {PLAYER, BOT};
 	
 	private static final String COLUMN_NAMES = "ABCDEFGHIJ";
@@ -50,6 +50,22 @@ public class BoardPanel extends JPanel {
 				add(boardButtons[rows][cols]);
 			}
 		}
+	}
+	
+	public GameButton[][] getBoardButtons() {
+		return boardButtons;
+	}
+
+	public void setBoardButtons(GameButton[][] boardButtons) {
+		this.boardButtons = boardButtons;
+	}
+
+	public BoardType getBoardType() {
+		return boardType;
+	}
+
+	public void setBoardType(BoardType boardType) {
+		this.boardType = boardType;
 	}
 	
 }
