@@ -74,6 +74,14 @@ public class Helper {
     }
 
     /**
+     * 
+     * @return
+     */
+    public static int getColumnPadding() {
+        return;
+    }
+
+    /**
      * Formats a string with custom spacing.
      *
      * @param formatType Format type
