@@ -371,10 +371,12 @@ public class Game {
  
             for (int i = 0; i < ROWS; i++) {
                 String prefix = formatString(IS_ROW, ROW_STRING.charAt(i));
- 
+                boolean defaultColor = true;
+
                 for (String[] line : output) {
-                    if (i == 0) {
+                    if (defaultColor) {
                         cp.print(prefix, Attribute.BOLD, FColor.BLUE, BColor.NONE);
+                        defaultColor = false;
                     } else {
                         cp.print(prefix, Attribute.BOLD, FColor.RED, BColor.NONE);
                     }
