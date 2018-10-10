@@ -78,6 +78,11 @@ public class Helper {
         return String.format("%" + formatType + "s", arg);
     }
 
+
+    public static String[] renderMap(Player player) {
+
+    }
+
     /**
      * Define temporary static initializer to compile.
      */
