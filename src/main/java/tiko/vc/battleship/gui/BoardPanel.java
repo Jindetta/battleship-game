@@ -18,6 +18,8 @@ public class BoardPanel extends JPanel {
 	
 	private GameButton[][] boardButtons;
 	
+	private BoardType boardType;
+	
 	/**
 	 * 
 	 */
