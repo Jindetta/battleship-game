@@ -151,13 +151,13 @@ public class Player {
     }
 
     /**
+     * Checks a range of cells for overlapping and collisions.
      *
+     * @param index Starting index
+     * @param direction Direction to check
+     * @param length Ship length
      *
-     * @param index
-     * @param direction
-     * @param length
-     *
-     * @return
+     * @return false if cell is used, otherwise true
      */
     private Optional<ArrayList<Integer>> getFreeAxis(int index, Directions direction, int length) {
         ArrayList<Integer> indices = new ArrayList<>();
