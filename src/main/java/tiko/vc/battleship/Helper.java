@@ -75,11 +75,19 @@ public class Helper {
 
     /**
      * Gets column padding amount.
-     * 
+     *
      * @return Column padding value.
      */
     public static int getColumnPadding() {
         return COLUMN_PADDING;
+    }
+
+    /**
+     * 
+     * @return
+     */
+    public static int getRowPadding() {
+        return;
     }
 
     /**
