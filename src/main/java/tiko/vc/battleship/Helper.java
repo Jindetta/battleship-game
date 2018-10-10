@@ -116,6 +116,10 @@ public class Helper {
         System.out.println();
     }
 
+    private static String createColumnString() {
+
+    }
+
     /**
      * Define temporary static initializer to compile.
      */
