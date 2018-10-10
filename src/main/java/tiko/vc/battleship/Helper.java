@@ -56,6 +56,14 @@ public class Helper {
     public static final String COLUMN_STRING;
 
     /**
+     *
+     * @return
+     */
+    public static int getTotalPadding() {
+        return;
+    }
+
+    /**
      * Formats a string with custom spacing.
      *
      * @param formatType Format type
