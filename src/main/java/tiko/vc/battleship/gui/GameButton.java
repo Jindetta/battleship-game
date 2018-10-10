@@ -39,6 +39,11 @@ public class GameButton extends JButton {
 		setyPosInBoard(yPosInBoard);
 	}
 	
+	/**
+	 * Called when this button is pressed.
+	 * 
+	 * @param e
+	 */
 	private void buttonPressed(ActionEvent e) {
 		
 	}	
