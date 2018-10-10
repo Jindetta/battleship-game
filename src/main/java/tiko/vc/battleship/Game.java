@@ -6,7 +6,7 @@ import com.diogonunes.jcdp.color.ColoredPrinter;
 import com.diogonunes.jcdp.color.api.Ansi.*;
 
 /**
- * 
+ * A class that creates the game and combines all needed classes.
  */
 public class Game {
 
