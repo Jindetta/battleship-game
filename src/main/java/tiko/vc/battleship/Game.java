@@ -115,6 +115,76 @@ public class Game {
     }
 
     /**
+     *
+     *
+     * @return
+     */
+    public boolean move() {
+        ColoredPrinter cp = new ColoredPrinter.Builder(1, false).build();
+        Player current = players[turnIndex % players.length];
+        Player opponent = players[(turnIndex + 1) % players.length];
+        boolean valid = false;
+ 
+        while (!valid) {
+            if (current.isAI()) {
+                int index = current.getShotLogic();
+ 
+                if (valid = opponent.shootTo(index)) {
+                    int value = opponent.getShotInformation(index);
+                    current.setShotLogic(index, value);
+ 
+                    cp.print(current + ":", Attribute.BOLD, FColor.RED, BColor.NONE);
+
+                    if (value > 0) {
+                        cp.println("Hit confirmed!", Attribute.NONE, FColor.NONE, BColor.NONE);
+                    } else if (value < 0) {
+                        cp.println(opponent.getShipName(value) + " sank!", Attribute.NONE, FColor.NONE, BColor.NONE);
+                    } else {
+                        cp.println("Shot missed!", Attribute.NONE, FColor.NONE, BColor.NONE);
+                    }
+ 
+                    //current.stats.increaseShotsFired(value != 0);
+                }
+            } else {
+                cp.print("Enter coordinates or type 'exit': ", Attribute.BOLD, FColor.NONE, BColor.NONE);
+                String query = getUserInput();
+ 
+                if (query.equals("EXIT")) {
+                    cp.clear();
+                    return false;
+                }
+ 
+                int index = processMove(query);
+ 
+                if (index != INVALID_VALUE) {
+                    if (valid = opponent.shootTo(index)) {
+                        int value = opponent.getShotInformation(index);
+ 
+                        cp.print(current + ":", Attribute.BOLD, FColor.BLUE, BColor.NONE);
+
+                        if (value > 0) {
+                            cp.println("Hit confirmed!", Attribute.NONE, FColor.NONE, BColor.NONE);
+                        } else if (value < 0) {
+                            cp.println(opponent.getShipName(value) + " sank!", Attribute.NONE, FColor.NONE, BColor.NONE);
+                        } else {
+                            cp.println("Shot missed!", Attribute.NONE, FColor.NONE, BColor.NONE);
+                        }
+ 
+                        //current.stats.increaseShotsFired(value != 0);
+                    } else {
+                        cp.println("Choose coordinates you haven't targeted before.", Attribute.BOLD, FColor.RED, BColor.NONE);
+                    }
+                } else {
+                    cp.println("Coordinates were invalid!", Attribute.BOLD, FColor.RED, BColor.NONE);
+                }
+            }
+        }
+
+        cp.clear();
+        return true;
+    }
+
+    /**
      * Launches game menu.
      */
     public void launchMenu() {
