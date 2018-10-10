@@ -185,6 +185,40 @@ public class Game {
     }
 
     /**
+     *
+     *
+     * @return
+     */
+    public Player playRound() {
+        boolean gameRunning = true;
+        Player winningPlayer = null;
+ 
+        while (gameRunning && winningPlayer == null) {
+            Player currentPlayer = currentPlayerTurn();
+ 
+            if (currentPlayer.shipsDestroyed()) {
+                winningPlayer = nextPlayerTurn();
+ 
+                for (Player player : players) {
+                    //player.stats.increaseGamesPlayed(player == winningPlayer);
+                    player.setCellsVisible();  
+                }
+ 
+                printMap(null);
+            } else {
+                if (!currentPlayer.isAI()) {
+                    printMap(null);
+                }
+ 
+                gameRunning = move();
+                nextPlayerTurn();
+            }
+        }
+ 
+        return winningPlayer;
+    }
+
+    /**
      * Launches game menu.
      */
     public void launchMenu() {
