@@ -32,7 +32,7 @@ public class BoardPanel extends JPanel {
 		
 		for(int rows = 0; rows < boardButtons.length; rows++) {
 			for(int cols = 0; cols < boardButtons[rows].length; cols++) {
-				boardButtons[rows][cols] = new GameButton("X");
+				boardButtons[rows][cols] = new GameButton('X');
 				add(boardButtons[rows][cols]);
 			}
 		}

@@ -4,11 +4,14 @@ import javax.swing.JButton;
 
 public class GameButton extends JButton {
 	
+	private char btnChar;
+	
 	private int xPosInBoard;
 	private int yPosInBoard;
 	
-	public GameButton(String btnText) {
-		super(btnText);
+	public GameButton(char btnChar) {
+		super(String.valueOf(btnChar));
+		this.setBtnChar(btnChar);
 	}
 	
 	public int getxPosInBoard() {
@@ -22,6 +25,14 @@ public class GameButton extends JButton {
 	}
 	public void setyPosInBoard(int yPosInBoard) {
 		this.yPosInBoard = yPosInBoard;
+	}
+
+	public char getBtnChar() {
+		return btnChar;
+	}
+
+	public void setBtnChar(char btnChar) {
+		this.btnChar = btnChar;
 	}	
 
 }
