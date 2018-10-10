@@ -39,15 +39,38 @@ public class GUI extends JFrame {
 		GridBagConstraints c = new GridBagConstraints();
 		
 		playerBoard = new BoardPanel(Color.BLACK);
-		botBoard = new BoardPanel(Color.cyan);	
+		botBoard = new BoardPanel(Color.cyan);
+		
+		startGame = new JButton("Start game");
+		generateShips = new JButton("Generate ships");
+		placeShips = new JButton("Place ships");
+		exitGame = new JButton("Exit game");
 
 		c.gridx = 0;
 		c.gridy = 0;
+		c.gridwidth = 2;
+		c.weightx = 1;
 		add(playerBoard, c);
 		
-		c.gridx = 1;
+		c.gridx = 2;
 		c.gridy = 0;
-		add(botBoard);
+		c.gridwidth = 2;
+		add(botBoard, c);
+		
+		c.gridx = 0;
+		c.gridy = 1;
+		c.weighty = 1;
+		c.gridwidth = 1;
+		add(startGame, c);
+		
+		c.gridx = 1;
+		add(generateShips, c);
+		
+		c.gridx = 2;
+		add(placeShips, c);	
+		
+		c.gridx = 3;
+		add(exitGame, c);	
 		
 		setVisible(true);
 	}
