@@ -110,6 +110,14 @@ public class GUI extends JFrame {
 	}
 	
 	/**
+	 * Called when start game button is pressed.
+	 * @param e
+	 */
+	private void startGamePressed(ActionEvent e) {
+		//TODO
+	}
+	
+	/**
 	 * Called when exit button is pressed.
 	 * Exits the program.
 	 * 
