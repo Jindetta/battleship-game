@@ -22,6 +22,7 @@ public class GUI extends JFrame {
 	private BoardPanel botBoard;
 	
 	private JButton startGame;
+	private JButton generateShips;
 	
 	/**
 	 * TODO
