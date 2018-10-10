@@ -109,6 +109,9 @@ public class Helper {
         System.out.println(arg);
     }
 
+    /**
+     * Wraps print function (System).
+     */
     public static void print() {
         System.out.println();
     }
