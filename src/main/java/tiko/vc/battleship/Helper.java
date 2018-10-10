@@ -65,11 +65,11 @@ public class Helper {
     }
 
     /**
-     * 
+     *
      * @return
      */
     public static int getPlayerSpacing() {
-        return;
+        return PLAYER_SPACING;
     }
 
     /**
