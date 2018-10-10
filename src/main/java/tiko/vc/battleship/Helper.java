@@ -173,10 +173,10 @@ public class Helper {
      * Define temporary static initializer to compile.
      */
     static {
-        TOTAL_PADDING = COLUMN_PADDING * Game.COLUMNS + ROW_PADDING;
+        ROW_PADDING = 1;
         PLAYER_SPACING  = ROW_PADDING * 2;
         COLUMN_PADDING = Game.COLUMNS > 9 ? 3 : 2;
-        ROW_PADDING = 1;
+        TOTAL_PADDING = COLUMN_PADDING * Game.COLUMNS + ROW_PADDING;
         ROW_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         COLUMN_STRING = createColumnString();
     }
