@@ -37,6 +37,10 @@ public class GameButton extends JButton {
 		setBoard(board);
 		setxPosInBoard(xPosInBoard);
 		setyPosInBoard(yPosInBoard);
+		
+		if(getBoard().getBoardType() == BoardPanel.BoardType.PLAYER &&
+				(getxPosInBoard() > 0 && getyPosInBoard() > 0))
+			addActionListener(this::buttonPressed);
 	}
 	
 	/**
@@ -45,7 +49,7 @@ public class GameButton extends JButton {
 	 * @param e
 	 */
 	private void buttonPressed(ActionEvent e) {
-		
+		System.out.println("Hey");
 	}	
 	
 	/* GETTERU & SETTERU */
