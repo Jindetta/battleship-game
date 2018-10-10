@@ -335,6 +335,15 @@ public class Player {
 
     /**
      *
+     */
+    protected void setCellsVisible() {
+        for (Cell cell : map) {
+            cell.setVisible();
+        }
+    }
+
+    /**
+     *
      *
      * @param padding
      * @return
