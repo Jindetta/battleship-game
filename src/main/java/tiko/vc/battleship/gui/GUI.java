@@ -8,6 +8,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+import tiko.vc.battleship.Ship;
+
 /**
  * Class that constructs the graphical user interface
  * for the battleship game.
@@ -113,6 +115,10 @@ public class GUI extends JFrame {
 		add(exitGame, c);	
 		
 		setVisible(true);
+	}
+	
+	public void addShipToBoard(Ship ship, int x, int y, int direction) {
+		
 	}
 	
 	/**
