@@ -65,7 +65,7 @@ public class BoardPanel extends JPanel {
 				else if(cols == 0 && rows > 0)
 					btnText = Integer.toString(rows);
 				
-				boardButtons[rows][cols] = new GameButton(btnText, rows, cols);
+				boardButtons[rows][cols] = new GameButton(this, btnText, rows, cols);
 				add(boardButtons[rows][cols]);
 			}
 		}
