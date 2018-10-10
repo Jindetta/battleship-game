@@ -77,6 +77,14 @@ public class Cell {
         visible = true;
     }
 
+    /**
+     * 
+     * @return
+     */
+    public boolean isVisible() {
+        return;
+    }
+
     @Override
     public String toString() {
         char value = '-';
