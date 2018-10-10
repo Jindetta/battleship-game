@@ -1,7 +1,8 @@
 package tiko.vc.battleship.gui;
 
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
+import java.awt.Color;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 
 import javax.swing.JFrame;
 
@@ -13,8 +14,8 @@ public class GUI extends JFrame {
 	
 	private final static String WINDOW_TITLE = "Battleship";
 	
-	private final static int WINDOW_WIDTH = 800;
-	private final static int WINDOW_HEIGHT = 600;
+	public final static int FRAME_WIDTH = 1000;
+	public final static int FRAME_HEIGHT = 600;
 	
 	private BoardPanel playerBoard;
 	private BoardPanel botBoard;
@@ -25,16 +26,23 @@ public class GUI extends JFrame {
 	public GUI() {
 		super(WINDOW_TITLE);
 		
-		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		setSize(FRAME_WIDTH, FRAME_HEIGHT);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
-		setLayout(new GridLayout(1, 1));
+		setLayout(new GridBagLayout());
+		GridBagConstraints c = new GridBagConstraints();
 		
-		playerBoard = new BoardPanel();
-		botBoard = new BoardPanel();
+		playerBoard = new BoardPanel(Color.BLACK);
+
+		c.gridx = 0;
+		c.gridy = 0;
+		add(playerBoard, c);
 		
-		add(playerBoard, BorderLayout.LINE_START);
-		add(botBoard, BorderLayout.LINE_END);
+		botBoard = new BoardPanel(Color.cyan);
+		
+		c.gridx = 1;
+		c.gridy = 0;
+		add(botBoard);
 		
 		setVisible(true);
 	}
