@@ -176,8 +176,9 @@ public class Statistics {
     }
 
     /**
+     * Gets shots hit amount.
      *
-     * @return
+     * @return Shots hit value.
      */
     public int getShotsHit() {
         return shotsHit;
