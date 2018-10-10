@@ -56,8 +56,9 @@ public class Helper {
     public static final String COLUMN_STRING;
 
     /**
-     * 
-     * @return
+     * Gets total padding amount.
+     *
+     * @return Total padding value.
      */
     public static int getTotalPadding() {
         return TOTAL_PADDING;
