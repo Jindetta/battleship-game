@@ -118,6 +118,15 @@ public class GUI extends JFrame {
 	}
 	
 	/**
+	 * Called when generate ships button is pressed.
+	 * 
+	 * @param e
+	 */
+	private void generateShipsPressed(ActionEvent e) {
+		//TODO
+	}
+	
+	/**
 	 * Called when exit button is pressed.
 	 * Exits the program.
 	 * 
