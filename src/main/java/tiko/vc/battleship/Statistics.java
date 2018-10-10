@@ -167,8 +167,9 @@ public class Statistics {
     }
 
     /**
+     * Gets current streak.
      *
-     * @return
+     * @return Current streak value.
      */
     public int getCurrentStreak() {
         return currentStreak;
