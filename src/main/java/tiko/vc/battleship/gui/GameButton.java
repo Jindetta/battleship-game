@@ -1,5 +1,9 @@
 package tiko.vc.battleship.gui;
 
-public class GameButton {
+import javax.swing.JButton;
+
+public class GameButton extends JButton {
+	
+	private int xPosInBoard;
 
 }
