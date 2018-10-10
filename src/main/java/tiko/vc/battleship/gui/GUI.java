@@ -15,7 +15,7 @@ public class GUI extends JFrame {
 	
 	private final static String WINDOW_TITLE = "Battleship";
 	
-	public final static int FRAME_WIDTH = 1000;
+	public final static int FRAME_WIDTH = 1100;
 	public final static int FRAME_HEIGHT = 600;
 	
 	private BoardPanel playerBoard;
