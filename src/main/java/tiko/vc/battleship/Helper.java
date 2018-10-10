@@ -65,8 +65,9 @@ public class Helper {
     }
 
     /**
+     * Gets player spacing amount.
      *
-     * @return
+     * @return Player spacing value.
      */
     public static int getPlayerSpacing() {
         return PLAYER_SPACING;
