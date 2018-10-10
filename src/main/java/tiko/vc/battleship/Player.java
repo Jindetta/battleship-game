@@ -420,4 +420,9 @@ public class Player {
     public TargetingLogic getAiLogic() {
         return aiLogic;
     }
+
+    @Overrides
+    public String toString() {
+        return getName();
+    }
 }
