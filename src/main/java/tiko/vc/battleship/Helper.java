@@ -56,6 +56,42 @@ public class Helper {
     public static final String COLUMN_STRING;
 
     /**
+     * Gets total padding amount.
+     *
+     * @return Total padding value.
+     */
+    public static int getTotalPadding() {
+        return TOTAL_PADDING;
+    }
+
+    /**
+     * Gets player spacing amount.
+     *
+     * @return Player spacing value.
+     */
+    public static int getPlayerSpacing() {
+        return PLAYER_SPACING;
+    }
+
+    /**
+     * Gets column padding amount.
+     *
+     * @return Column padding value.
+     */
+    public static int getColumnPadding() {
+        return COLUMN_PADDING;
+    }
+
+    /**
+     * Gets row padding amount.
+     *
+     * @return Row padding value.
+     */
+    public static int getRowPadding() {
+        return ROW_PADDING;
+    }
+
+    /**
      * Formats a string with custom spacing.
      *
      * @param formatType Format type
@@ -77,7 +113,6 @@ public class Helper {
 
         return String.format("%" + formatType + "s", arg);
     }
-
 
     /**
      * Renders player map.
@@ -138,11 +173,11 @@ public class Helper {
      * Define temporary static initializer to compile.
      */
     static {
-        TOTAL_PADDING = 0;
-        PLAYER_SPACING  = 0;
-        COLUMN_PADDING = 0;
-        ROW_PADDING = 0;
-        ROW_STRING = "";
-        COLUMN_STRING = "";
+        TOTAL_PADDING = COLUMN_PADDING * Game.COLUMNS + ROW_PADDING;
+        PLAYER_SPACING  = ROW_PADDING * 2;
+        COLUMN_PADDING = Game.COLUMNS > 9 ? 3 : 2;
+        ROW_PADDING = 1;
+        ROW_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        COLUMN_STRING = createColumnString();
     }
 }
