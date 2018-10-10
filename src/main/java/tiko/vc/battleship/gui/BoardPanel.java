@@ -12,14 +12,31 @@ import javax.swing.JPanel;
 
 public class BoardPanel extends JPanel {
 	
+	/**
+	 * Size of the JPanel. Used both in width and height.
+	 */
 	public static final int BOARD_SIZE = GUI.FRAME_WIDTH / 2 - 10;
 
+	/**
+	 * Enum that is used to define if the Board is
+	 * players or bots.
+	 */
 	public static enum BoardType {PLAYER, BOT};
 	
+	/**
+	 * Used for buttons texts that prints the coordinates.
+	 */
 	private static final String COLUMN_NAMES = "ABCDEFGHIJ";
 	
+	/**
+	 * Buttons that are used in the JPanel. These buttons constructs
+	 * the whole game and its played by clicking these.
+	 */
 	private GameButton[][] boardButtons;
 	
+	/**
+	 * Sets the type of the board, either PLAYER or BOT.
+	 */
 	private BoardType boardType;
 	
 	/**
@@ -51,6 +68,8 @@ public class BoardPanel extends JPanel {
 			}
 		}
 	}
+	
+	/* GETTERU & SETTERU: */
 	
 	public GameButton[][] getBoardButtons() {
 		return boardButtons;
