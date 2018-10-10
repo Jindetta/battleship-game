@@ -251,13 +251,13 @@ public class Player {
     }
 
     /**
+     * Places ship into given index.
      *
+     * @param index Starting index
+     * @param direction Direction of the ship
+     * @param ship Ship data
      *
-     * @param index
-     * @param direction
-     * @param ship
-     *
-     * @return
+     * @return true if placement is successful, otherwise false
      */
     protected boolean placeShip(int index, Directions direction, Ship ship) { 
         Optional<ArrayList<Integer>> indices = getFreeAxis(index, direction, ship.getLength());
