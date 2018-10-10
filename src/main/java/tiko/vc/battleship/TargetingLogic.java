@@ -288,5 +288,13 @@ public class TargetingLogic {
         public int getShotOrigin() {
             return shotOrigin;
         }
+
+        /**
+         *
+         * @return
+         */
+        public int getShotValue() {
+            return;
+        }
     }
 }
