@@ -338,6 +338,6 @@ public class Player {
      * @return
      */
     public Cell[] getMap() {
-        return;
+        return map;
     }
 }
