@@ -13,7 +13,7 @@ public enum Directions {
      */
     DIRECTION_E,
     /**
-     *
+     * West direction
      */
     DIRECTION_W,
     /**
