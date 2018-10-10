@@ -79,6 +79,13 @@ public class Helper {
     }
 
 
+    /**
+     * Renders player map.
+     *
+     * @param player Player object
+     *
+     * @return string array with rendered output
+     */
     public static String[] renderMap(Player player) {
         return player.renderMap(COLUMN_PADDING);
     }
