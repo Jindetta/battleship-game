@@ -74,11 +74,11 @@ public class Helper {
     }
 
     /**
-     * 
+     *
      * @return
      */
     public static int getColumnPadding() {
-        return;
+        return COLUMN_PADDING;
     }
 
     /**
