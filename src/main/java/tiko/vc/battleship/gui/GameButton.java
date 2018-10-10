@@ -33,6 +33,7 @@ public class GameButton extends JButton {
 	 */
 	public GameButton(BoardPanel board, String btnText, int xPosInBoard, int yPosInBoard) {
 		super(btnText);
+		setBoard(board);
 		setxPosInBoard(xPosInBoard);
 		setyPosInBoard(yPosInBoard);
 	}
