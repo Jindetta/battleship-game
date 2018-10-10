@@ -78,11 +78,11 @@ public class Cell {
     }
 
     /**
-     * 
+     *
      * @return
      */
     public boolean isVisible() {
-        return;
+        return visible;
     }
 
     @Override
