@@ -7,6 +7,10 @@ public class GameButton extends JButton {
 	private int xPosInBoard;
 	private int yPosInBoard;
 	
+	public GameButton(String btnText) {
+		super(btnText);
+	}
+	
 	public int getxPosInBoard() {
 		return xPosInBoard;
 	}
