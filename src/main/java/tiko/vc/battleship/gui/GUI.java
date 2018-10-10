@@ -3,6 +3,7 @@ package tiko.vc.battleship.gui;
 import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -45,6 +46,7 @@ public class GUI extends JFrame {
 		generateShips = new JButton("Generate ships");
 		placeShips = new JButton("Place ships");
 		exitGame = new JButton("Exit game");
+		exitGame.addActionListener(this::exitGamePressed);
 
 		c.gridx = 0;
 		c.gridy = 0;
@@ -73,6 +75,10 @@ public class GUI extends JFrame {
 		add(exitGame, c);	
 		
 		setVisible(true);
+	}
+	
+	private void exitGamePressed(ActionEvent e) {
+		System.exit(0);	
 	}
 
 }
