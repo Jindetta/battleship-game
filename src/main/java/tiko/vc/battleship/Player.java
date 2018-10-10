@@ -343,8 +343,9 @@ public class Player {
     }
 
     /**
-     * 
-     * @return
+     * Gets players vessels.
+     *
+     * @return Players vessels.
      */
     public Ship[] getVessels() {
         return vessels;
