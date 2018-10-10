@@ -100,7 +100,11 @@ public class Helper {
         System.out.printf(format, args);
     }
 
-
+    /**
+     * Wraps print function (System).
+     *
+     * @param arg Arguments
+     */
     public static void print(String arg) {
         System.out.println(arg);
     }
