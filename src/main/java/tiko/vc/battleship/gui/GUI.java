@@ -127,6 +127,15 @@ public class GUI extends JFrame {
 	}
 	
 	/**
+	 * Called when place ships button is pressed.
+	 * 
+	 * @param e
+	 */
+	private void placeShipsPressed(ActionEvent e) {
+		//TODO
+	}
+	
+	/**
 	 * Called when exit button is pressed.
 	 * Exits the program.
 	 * 
