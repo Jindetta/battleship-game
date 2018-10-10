@@ -184,6 +184,24 @@ public class Statistics {
         return shotsHit;
     }
 
+    /**
+     * Gets amount of missed shots.
+     *
+     * @return Shots missed value.
+     */
+    public int getShotsMissed() {
+        return shotsMissed;
+    }
+
+    /**
+     * Gets shot streak.
+     *
+     * @return Shot streak value.
+     */
+    public int getShotStreak() {
+        return shotStreak;
+    }
+
     @Override
     public String toString() {
         String results = "Games played: " + (getGamesWon() + getGamesLost()) + "\n";
