@@ -30,7 +30,7 @@ public class TargetingLogic {
     private final static int IGNORE_PRIORITY = 0;
 
     /**
-     *
+     * Override constructor.
      */
     public TargetingLogic() {
         logics = new ArrayList<>();
