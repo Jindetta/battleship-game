@@ -1,24 +1,62 @@
 package tiko.vc.battleship;
 
+import java.util.Optional;
+
 /**
  * A class containing an individual cell data.
  */
 public class Cell {
 
     /**
-     * Define ship type in this cell. Defaults to none.
+     * Define Ship object in this cell.
      */
-    public int type = 0;
+    private Optional<Ship> shipData;
 
     /**
      * Define if cell was shot. Defaults to false.
      */
-    public boolean shot = false;
+    private boolean shot;
 
     /**
      * Define if cell is visible. Defaults to true.
      */
     private boolean visible = true;
+
+    /**
+     *
+     *
+     * @return
+     */
+    public Optional<Ship> getShipData() {
+        return shipData;
+    }
+
+    /**
+     * Sets ship information.
+     *
+     * @param shipData Ship object.
+     */
+    public void setShipData(Ship shipData) {
+        this.shipData = Optional.ofNullable(shipData);
+    }
+
+    /**
+     * Gets cell shot state.
+     *
+     * @return Cell shot state.
+     */
+    public boolean isShot() {
+        return shot;
+    }
+
+    /**
+     * Sets cell state as shot.
+     *
+     * @param shot Cell shot state.
+     */
+    public void setShot(boolean shot) {
+        this.shot = shot;
+    }
 
     /**
      * Override constructor.
@@ -27,6 +65,9 @@ public class Cell {
      */
     public Cell(boolean visible) {
         this.visible = visible;
+
+        setShipData(null);
+        setShot(false);
     }
 
     /**
@@ -36,11 +77,20 @@ public class Cell {
         visible = true;
     }
 
+    /**
+     * Gets cell visible state.
+     *
+     * @return Cell visible state.
+     */
+    public boolean isVisible() {
+        return visible;
+    }
+
     @Override
     public String toString() {
         char value = '-';
 
-        if (type != 0) {
+        if (shipData.isPresent()) {
             if (shot) {
                 value = 'X';
             } else {
@@ -49,7 +99,7 @@ public class Cell {
                 }
 
                 if (Game.DEBUG_MODE) {
-                    value = (char) type;
+                    value = (char) shipData.get().getId();
                 }
             }
         } else if (shot) {
