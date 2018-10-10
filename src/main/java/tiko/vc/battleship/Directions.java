@@ -9,7 +9,7 @@ public enum Directions {
      */
     DIRECTION_N,
     /**
-     *
+     * East direction
      */
     DIRECTION_E,
     /**
