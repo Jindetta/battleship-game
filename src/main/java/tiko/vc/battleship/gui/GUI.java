@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
@@ -20,6 +21,8 @@ public class GUI extends JFrame {
 	private BoardPanel playerBoard;
 	private BoardPanel botBoard;
 	
+	private JButton startGame;
+	
 	/**
 	 * TODO
 	 */
@@ -33,12 +36,11 @@ public class GUI extends JFrame {
 		GridBagConstraints c = new GridBagConstraints();
 		
 		playerBoard = new BoardPanel(Color.BLACK);
+		botBoard = new BoardPanel(Color.cyan);	
 
 		c.gridx = 0;
 		c.gridy = 0;
 		add(playerBoard, c);
-		
-		botBoard = new BoardPanel(Color.cyan);
 		
 		c.gridx = 1;
 		c.gridy = 0;
