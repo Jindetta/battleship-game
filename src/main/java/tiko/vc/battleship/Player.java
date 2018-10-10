@@ -91,11 +91,11 @@ public class Player {
     }
 
     /**
+     * Checks if cell is shot.
      *
+     * @param index Cell index
      *
-     * @param index
-     *
-     * @return
+     * @return True if cell is shot
      */
     private boolean isCellShot(int index) {
         return map[index % map.length].isShot();
