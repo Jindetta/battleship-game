@@ -306,6 +306,30 @@ public class Player {
     }
 
     /**
+     *
+     *
+     * @param padding
+     * @return
+     */
+    protected String[] renderMap(int padding) {
+        String[] output = new String[ROWS];
+        final String PADDING_FORMAT = "%" + padding + "s";
+ 
+        for (int r = 0; r < ROWS; r++) {
+            StringBuilder buffer = new StringBuilder();
+ 
+            for (int c = 0; c < COLUMNS; c++) {
+                int index = r * COLUMNS + c;
+                buffer.append(String.format(PADDING_FORMAT, map[index]));
+            }
+ 
+            output[r] = buffer.toString();
+        }
+ 
+        return output;
+    }
+
+    /**
      * Resets map data.
      */
     protected final void resetMap() {
