@@ -194,11 +194,11 @@ public class Statistics {
     }
 
     /**
-     * 
+     *
      * @return
      */
     public int getShotStreak() {
-        return;
+        return shotStreak;
     }
 
     @Override
