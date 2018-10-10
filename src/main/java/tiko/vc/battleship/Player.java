@@ -334,8 +334,9 @@ public class Player {
     }
 
     /**
+     * Gets player map.
      *
-     * @return
+     * @return Player map.
      */
     public Cell[] getMap() {
         return map;
