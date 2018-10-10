@@ -248,6 +248,71 @@ public class Game {
     }
 
     /**
+     *
+     * 
+     * @param player
+     */
+    public void printMap(Player player) {
+        ColoredPrinter cp = new ColoredPrinter.Builder(1, false).build();
+
+        if (player != null) {
+            String[] output = renderMap(player);
+ 
+            cp.println(COLUMN_STRING, Attribute.BOLD, FColor.BLUE, BColor.NONE);
+ 
+            for (int x = 0; x < output.length; x++) {
+                String prefix = formatString(IS_ROW, ROW_STRING.charAt(x));
+                cp.print(prefix, Attribute.BOLD, FColor.BLUE, BColor.NONE);
+                cp.println(output[x], Attribute.NONE, FColor.NONE, BColor.NONE);
+            }
+        } else {
+            String[][] output = new String[players.length][];
+            String suffix = formatString(IS_SPACING, "");
+ 
+            for (int i = 0; i < output.length; i++) {
+                output[i] = renderMap(players[i]);
+
+                if (i == 0) {
+                    cp.print(formatString(IS_TOTAL, players[i]) + suffix, Attribute.BOLD, FColor.WHITE, BColor.BLUE);
+                } else {
+                    cp.print(formatString(IS_TOTAL, players[i]) + suffix, Attribute.BOLD, FColor.WHITE, BColor.RED);
+                }
+            }
+
+            cp.println("", Attribute.NONE, FColor.NONE, BColor.NONE);
+ 
+            for (int i = 0; i < output.length; i++) {
+                if (i == 0) {
+                    cp.print(COLUMN_STRING, Attribute.BOLD, FColor.BLUE, BColor.NONE);
+                } else {
+                    cp.print(COLUMN_STRING, Attribute.BOLD, FColor.RED, BColor.NONE);
+                }
+            }
+
+            cp.println("", Attribute.NONE, FColor.NONE, BColor.NONE);
+ 
+            for (int i = 0; i < ROWS; i++) {
+                String prefix = formatString(IS_ROW, ROW_STRING.charAt(i));
+ 
+                for (String[] line : output) {
+                    if (i == 0) {
+                        cp.print(prefix, Attribute.BOLD, FColor.BLUE, BColor.NONE);
+                    } else {
+                        cp.print(prefix, Attribute.BOLD, FColor.RED, BColor.NONE);
+                    }
+
+                    cp.print(line[i] + suffix, Attribute.NONE, FColor.NONE, BColor.NONE);
+                }
+ 
+                cp.println("");
+            }
+        }
+ 
+        cp.clear();
+        print();
+    }
+
+    /**
      * Overrides default constructor.
      */
     private Game() {
